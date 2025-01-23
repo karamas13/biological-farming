@@ -1,29 +1,25 @@
-import VideoPlayer from "../components/VideoPlayer";
+import farm from "../assets/photos/farming.jpg"
+import NavBar from "../components/NavBar";
 
 const HomePage = () => {
     return ( 
         <div className="overflow-hidden">
-         <div className="relative overflow-hidden h-screen w-screen">
-             {/* Centered Heading */}
-             <h1 className="text-green-800 text-8xl font-bold absolute z-10 flex justify-center items-center top-0 left-0 right-0 bottom-0">
-                 Biological Agriculture
-             </h1>
- 
-             {/* Video Player */}
-             <VideoPlayer className="absolute object-cover" />
- 
-             {/* Green Tint Overlay */}
-             <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-transparent via-transparent to-[#f1f1f1] opacity-100 z-10"></div>
-          </div>
-           <div className="h-screen w-screen flex">
-             <div className="w-[50%] bg-orange-500 flex justify-center align-center">
-                <h1 className="text-6xl text-[#f1f1f1] mt-10">Summer</h1>
-             </div>
-             <div className="w-[50%] bg-blue-800">
-                <h1>Winter</h1>
-             </div>
+          <NavBar />
+           {/* Overlay */}
+         <div className="absolute inset-0 bg-stone-950 opacity-80 z-10"></div>
+      
+           <div className="bg-farming1 h-screen w-screen text-6xl text-red-600 bg-no-repeat  bg-cover">
+           
+             <div className="h-screen flex items-center justify-center flex-col">
+               <h1 className="z-20 text-8xl bg-gradient-to-r from-orange-300 via-yellow-500 to-green-500 bg-clip-text tracking-tight text-transparent text-center">Biological <br></br><section className="ml-[10ex] mt-2">Farming</section> </h1>
+               <h2 className="z-20 text-6xl text-[#f1f1f1] mt-10">Natural Products</h2>
+               <p className="w-[40%] text-xl z-20 mt-8 text-center text-stone-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quisquam at rem consequuntur exercitationem fugit hic itaque, voluptate quis maiores. Aperiam natus sint aliquid, illum repellendus temporibus? Atque, officia natus.</p>
+             </div> 
+           </div> 
+           <div>
+            <h2>Test</h2>
            </div>
-         </div>
+        </div>
      );
 }
  

@@ -5,7 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{ 'farming1': "url('./src/assets/photos/farming.jpg')" },
+    
+    },
   },
   plugins: [],
 }
