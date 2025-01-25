@@ -6,9 +6,17 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage:{ 'farming1': "url('./src/assets/photos/farming.jpg')" },
+      backgroundImage:{ 
+        'farming1': "url('./src/assets/photos/farming.jpg')",
+        'map': "url('./src/assets/photos/map.webp')",  
+        'map2': "url('./src/assets/photos/map2.jpg')",  
+        'map3': "url('./src/assets/photos/map3.jpeg')",  
+      },
+     
     
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
