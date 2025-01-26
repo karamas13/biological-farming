@@ -1,4 +1,4 @@
-import farm from "../assets/photos/farming.jpg"
+import farm from "/photos/farming.jpg"
 import NavBar from "../components/NavBar";
 import MinInfo from "../components/MinInfo";
 import Hero from "../components/Hero";

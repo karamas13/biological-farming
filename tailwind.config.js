@@ -6,10 +6,10 @@ export default {
   theme: {
     extend: {
       backgroundImage:{ 
-        'farming1': "url('./src/assets/photos/farming.jpg')",
-        'map': "url('./src/assets/photos/map.webp')",  
-        'map2': "url('./src/assets/photos/map2.jpg')",  
-        'map3': "url('./src/assets/photos/map3.jpeg')",  
+        'farming1': "url('/photos/farming.jpg')",
+        'map': "url('/photos/map.webp')",  
+        'map2': "url('/photos/map2.jpg')",  
+        'map3': "url('/photos/map3.jpeg')",  
       },
      
     

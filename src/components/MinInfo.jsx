@@ -1,6 +1,6 @@
-import farm from "../assets/photos/farm.jpg"
-import tractors from "../assets/photos/tractors.jpg"
-import haybale from "../assets/photos/haybale.jpg"
+import farm from "/photos/farm.jpg"
+import tractors from "/photos/tractors.jpg"
+import haybale from "/photos/haybale.jpg"
 
 const MinInfo = () => {
     return ( 
