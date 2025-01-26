@@ -27,7 +27,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed w-full bg-transparent z-30 transition-all duration-300 ${scrollingDown ? '-top-20' : 'top-0'}`}
+      className={`fixed w-full bg-transparent z-10 transition-all duration-300 ${scrollingDown ? '-top-20' : 'top-0'}`}
       style={{
         transition: 'top 0.3s ease',
       }}
