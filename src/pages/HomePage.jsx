@@ -4,6 +4,7 @@ import MinInfo from "../components/MinInfo";
 import Hero from "../components/Hero";
 import PowerCards from "../components/PowerCards";
 import FarmsSection from "../components/FarmsSection";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
     return ( 
@@ -17,7 +18,9 @@ const HomePage = () => {
 
            <PowerCards />
 
-           <FarmsSection />          
+           <FarmsSection />    
+
+           <Footer />      
             
          </div>
         
