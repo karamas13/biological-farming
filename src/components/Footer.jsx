@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLeaf
 const Footer = () => {
   return (
     <div className="min-h-fit bg-slate-950 text-[#f1f1f1]">
-      <div className="flex flex-col lg:flex lg:flex-row md:flex md:flex-col sm:flex-row justify-between items-center sm:px-60 md:px-24 py-10 md:items-center">
+      <div className="flex flex-col lg:flex lg:flex-row md:flex md:flex-col sm:flex-row justify-between items-center sm:px-60 md:px-40  py-10 md:items-center">
         
         {/* Logo Section */}
         <div className="flex flex-col w-[50%] sm:w-[20%] min-h-[18em] text-center sm:text-left md:text-center md:w-[20%]">
