@@ -17,7 +17,7 @@ const MinInfo = () => {
                           className="w-full">
                             <h3 className="italic text-lg font-bold text-yellow-500 mb-1">Περισσότερα για εμάς...</h3>
                             <h2 className="italic font-bold text-3xl sm:text-4xl md:text-5xl text-green-900 mb-6">Ποιοί Είμαστε;</h2>
-                            <p className="text-base sm:text-lg">
+                            <p className="text-base sm:text-lg w-[75%]">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum laudantium, ad dignissimos, quis nesciunt quae vitae amet maxime modi eveniet animi inventore expedita assumenda non perspiciatis ducimus iusto blanditiis? Magnam laudantium aliquam maxime adipisci non a facere sint sed veritatis soluta. Placeat!
                             </p>
                         </motion.div>
@@ -41,7 +41,7 @@ const MinInfo = () => {
                         </motion.div>
                     </div>
 
-                    <div className="flex justify-between gap-6 py-6 sm:w-1/2 flex-wrap sm:flex-nowrap ">
+                    <div className="flex justify-between gap-6 py-6 sm:w-1/2 flex-wrap sm:flex-nowrap px-10">
                         <motion.img
                          whileInView={{opacity:1, y:0}}
                          initial={{opacity:0, y:100}}
