@@ -1,10 +1,17 @@
+import { SiSpacex } from "react-icons/si";
+import { useRef, useState, useEffect } from "react";
+import farming from "/photos/farming.jpg";
+import farming1 from "/photos/farming1.jpg";
+import farming2 from "/photos/farming2.jpg";
+import farming3 from "/photos/farming3.jpg";
+import farming4 from "/photos/farming4.jpg";
+import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+
 export const SmoothScrollLenis = () => {
   return (
-    <div className="bg-zinc-950 overflow-x-hidden sm:overflow-x-auto">
+    <div className="bg-zinc-950 overflow-x-hidden sm:overflow-x-hidden lg:overflow-x-visible">
       <Nav />
       <Hero />
-      <Info />
-      <HorizontalScrollCarousel />
       <Details />
     </div>
   );
@@ -45,7 +52,7 @@ const CenterImage = () => {
 
   return (
     <motion.div
-      className="sticky top-0 sm:top-0 w-full h-screen bg-center bg-cover"
+      className="sticky top-0 sm:top-0 left-0 w-full h-screen bg-center bg-cover"
       style={{
         opacity,
         backgroundSize,
@@ -86,78 +93,16 @@ const ParallaxImg = ({ className, alt, src, start, end }) => {
   return <motion.img src={src} alt={alt} className={className} ref={ref} style={{ transform, opacity }} />;
 };
 
-const Info = () => {
-  return (
-    <div className="pt-60 px-4 sm:px-8 md:px-12 lg:px-20">
-      <h1 className="text-4xl text-white text-center py-2">Προϊόντα Χειμερινής Παραγωγής</h1>
-    </div>
-  );
-};
 
-const HorizontalScrollCarousel = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
-
-  return (
-    <section ref={targetRef} className="relative h-[350vh] sm:h-[150vh] md:h-[250vh]">
-      <div className="h-screen sticky top-0 md:top-0 sm:top-0 lg:top-0 flex items-center overflow-x-auto">
-        <motion.div
-          style={{ x }}
-          className="flex gap-4 sm:gap-6 lg:gap-8 w-full min-w-max sm:flex sm:flex-col md:flex md:flex-col flex-col lg:flex lg:flex-row justify-center items-center"
-        >
-          {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-const cards = [
-  { url: farming1, title: "Image1", id: 1 },
-  { url: farming2, title: "Image2", id: 2 },
-  { url: farming3, title: "Image3", id: 3 },
-  { url: farming4, title: "Image4", id: 4 },
-  { url: farming1, title: "Image1", id: 5 },
-  { url: farming2, title: "Image2", id: 6 },
-  { url: farming3, title: "Image3", id: 7 },
-  { url: farming4, title: "Image4", id: 8 },
-];
-
-const Card = ({ card }) => {
-  return (
-    <div key={card.id} className="group relative h-[170px] sm:h-[300px] lg:h-[450px] lg:min-w-10 md:min-w-24 sm:min-w-full min-w-52 sm:w-[520px]  overflow-hidden bg-neutral-200">
-      <div
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-4 sm:p-6 lg:p-8 text-2xl sm:text-4xl font-black uppercase text-white backdrop-blur-lg">
-          {card.title}
-        </p>
-      </div>
-    </div>
-  );
-};
 
 const Details = () => {
   return (
-    <div className="h-screen py-10 px-4 sm:px-8 lg:px-20">
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
+    <div className="h-screen py-80 px-4 sm:px-8 lg:px-20 text-white">
+      <h1 className="text-4xl">Χειμερινά Προϊόντα</h1>
     </div>
   );
 };
+
+
+
+

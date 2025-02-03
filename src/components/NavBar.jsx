@@ -1,16 +1,18 @@
+import { FaTractor } from "react-icons/fa";
+
 const NavBar = () => {
   return ( 
-      <nav className="flex items-center justify-between py-5 bg-stone-950 font-serif">
-        <div className="flex flex-shrink-0 items-center px-4">
-          <h1 className="text-white text-3xl">Logo</h1>
+      <nav className="flex items-center justify-between py-5 bg-transparent font-serif absolute z-30 w-screen">
+        <div className="flex flex-shrink-0 items-center px-4 gap-2 text-lime-500 lg:text-4xl">
+          <FaTractor className="text-[#FFD700]"/>
+          <h1 className="">BioFarms</h1>
         </div>
         <div className="flex items-center justify-center">
           <div className="text-center tracking-tighter">
-           <div className="flex justify-center items-center lg:gap-20 lg:text-[1.5em] text-[0.8em] text-white gap-6 lg:mr-20 mr-10">
-            <a href="#" className="">About Us</a>
-            <a href="#" className="">Contact</a>
-            <a href="#" className="">Info</a>
-            <a href="#" className="">More</a>
+           <div className="flex justify-center items-center lg:gap-20 lg:text-[1.5em] text-[0.8em] text-white gap-6 lg:mr-20 mr-1">
+            <a href="#" className="hover:text-lime-500 transition ease-in-out duration-[0.7s]">Farms</a>
+            <a href="#" className="hover:text-lime-500 transition ease-in-out duration-[0.7s]">Contact</a>
+            <a href="#" className="hover:text-lime-500 transition ease-in-out duration-[0.7s]">Info</a>        
            </div>
           </div>
         </div>

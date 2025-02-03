@@ -7,14 +7,16 @@ import { useNavigate } from "react-router-dom";
 
 const FarmsSection = () => {
 
+  const navigate = useNavigate();
+
   const time = useTime();
   const rotate = useTransform(time, [0, 10000], [0, 360], { clamp: false });
 
   return (
     <div className="">
       {/* Image Section with gradient transition */}
-      <div className="min-h-screen bg-cover bg-center relative h-fit pb-60" style={{ backgroundImage: `url(${soil})` }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950 opacity-100"></div>
+      <div className="min-h-screen bg-cover bg-center relative h-fit pb-60 " style={{ backgroundImage: `url(${soil})` }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-transparent to-slate-950 opacity-100"></div>
         <motion.div 
          whileInView={{opacity:1, y:0}}
          initial={{opacity:0, y:100}}
@@ -31,7 +33,7 @@ const FarmsSection = () => {
    whileInView={{opacity:1, x:0}}
    initial={{opacity:0, x:-200}}
    transition={{duration:1}}
-   className="w-full sm:w-[45%] md:w-[45%] lg:w-[40%] h-full sm:h-[400px] lg:h-[450px] rounded-2xl bg-cover bg-center relative min-h-fit" style={{ backgroundImage: `url(${farm})` }}>
+   className="w-full sm:w-[45%] md:w-[45%] lg:w-[40%] h-full sm:h-[400px] md:h-[30em] lg:h-[450px] rounded-2xl bg-cover bg-center relative min-h-fit" style={{ backgroundImage: `url(${farm})` }}>
     <div className="bg-orange-500 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 backdrop-saturate-100 backdrop-contrast-100 h-full rounded-2xl min-h-fit">
     <div className="flex">
       <motion.div
@@ -60,7 +62,7 @@ const FarmsSection = () => {
    whileInView={{opacity:1, x:0}}
    initial={{opacity:0, x:200}}
    transition={{duration:1}}
-   className="w-full sm:w-[45%] md:w-[45%] lg:w-[40%] h-full sm:h-[400px] lg:h-[450px] rounded-2xl bg-cover bg-center relative mt-20 sm:mt-0 min-h-fit" style={{ backgroundImage: `url(${farm})` }}>
+   className="w-full sm:w-[45%] md:w-[45%] lg:w-[40%] h-full sm:h-[400px] md:h-[30em] lg:h-[450px] rounded-2xl bg-cover bg-center relative mt-20 sm:mt-0 min-h-fit" style={{ backgroundImage: `url(${farm})` }}>
     <div className="bg-blue-950 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 backdrop-saturate-100 backdrop-contrast-100 rounded-2xl h-full min-h-fit">
     <div className="flex">
    <motion.div
@@ -76,7 +78,7 @@ const FarmsSection = () => {
         <p className="px-4 sm:px-10 py-4 text-white text-center text-lg">
           Lorem ipsum dolor sit amet consectetur Ex cupiditate amet deleniti veritatis quisquam quibusdam eius doloremque sapiente? Blanditiis esse beatae quod consequatur? 
         </p>
-        <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5" onClick={{}}>
+        <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5" onClick={() => navigate("/SummerFarms")}>
           <div className="absolute inset-0 w-3 bg-blue-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>
           <span className="relative text-black group-hover:text-white">Περισσότερα</span>
         </button>

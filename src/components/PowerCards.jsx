@@ -21,14 +21,16 @@ const iconVariants = (duration) => ({
 
 const PowerCards = () => {
   return (
-    <div className="h-auto max-w-screen bg-gradient-to-b from-green-50 via-green-100 to-lime-200 px-4 py-10">
+    <div className="h-auto max-w-screen bg-green-950 px-4 py-10 pb-40 relative">
+      <div className="absolute inset-0 bg-gradient-to-t  to-transparent opacity-100 z-10"></div>
+      <div className="z-20 relative">
       <motion.div 
        whileInView={{opacity:1, y:0}}
        initial={{opacity:0, y:100}}
        transition={{duration:0.8}}
        className="text-center py-10">
         <h3 className="italic text-lg font-bold text-yellow-500 mb-2">Οι Υπηρεσίες μας</h3>
-        <h2 className="font-bold text-4xl text-green-950">Τι προσφέρουμε;</h2>
+        <h2 className="font-bold text-4xl text-[#f1f1f1]">Τι προσφέρουμε;</h2>
       </motion.div>
 
       {/* Flex container for responsive cards */}
@@ -91,6 +93,7 @@ const PowerCards = () => {
 
       
       </motion.div>
+      </div>
     </div>
   );
 }

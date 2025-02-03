@@ -3,10 +3,10 @@ import { FaInstagram, FaFacebook, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLeaf
 const Footer = () => {
   return (
     <div className="min-h-fit bg-slate-950 text-[#f1f1f1]">
-      <div className="flex flex-col lg:flex lg:flex-row md:flex md:flex-col sm:flex-row justify-between items-center sm:px-60 md:px-40  py-10 md:items-center">
+      <div className="flex flex-col lg:flex lg:flex-row md:flex md:flex-col sm:flex-row justify-between items-center sm:px-60 md:px-40 py-10">
         
         {/* Logo Section */}
-        <div className="flex flex-col w-[50%] sm:w-[20%] min-h-[18em] text-center sm:text-left md:text-center md:w-[20%]">
+        <div className="flex flex-col lg:w-[33%] sm:w-[20%] min-h-[18em] text-center sm:text-left md:text-center md:w-[50%]">
           <h3 className="text-4xl sm:text-6xl py-4">Logo</h3>
           <p className="text-sm sm:text-base">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis corrupti adipisci minus.
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
         
         {/* Explore Section */}
-        <div className="sm:w-[20%] min-h-[18em] text-center sm:text-left">
+        <div className="sm:w-[20%] lg:w-[33%] min-h-[18em] flex flex-col justify-center items-center text-center sm:text-left">
           <h2 className="text-4xl sm:text-6xl py-1 md:text-5xl">Explore
             <span className="flex items-center justify-center sm:justify-start mt-2 sm:mt-4">
               <section className="w-[2em] border-b-[3px] border-green-900 rounded-2xl my-4"></section>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="sm:w-[20%] min-h-[18em] text-center sm:text-left ">
+        <div className="sm:w-[20%] lg:w-[33%] min-h-[18em] flex flex-col items-center justify-center text-center sm:text-left ">
           <h2 className="text-4xl sm:text-6xl py-1 md:text-5xl">Contact
             <span className="flex items-center justify-center sm:justify-start mt-2 sm:mt-4">
               <section className="w-[2em] border-b-[3px] border-green-900 rounded-2xl my-4"></section>

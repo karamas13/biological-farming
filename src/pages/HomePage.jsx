@@ -10,13 +10,13 @@ const HomePage = () => {
     return ( 
         
          <div className="overflow-x-hidden font-serif scrollbar-thin scrollbar-track-green-950 scrollbar-thumb-lime-700 h-32 min-h-screen">
-           <NavBar />
+         
            
            <Hero />
            
            <MinInfo />
 
-           <PowerCards />
+        
 
            <FarmsSection />    
 
