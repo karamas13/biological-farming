@@ -51,7 +51,7 @@ const FarmsSection = () => {
         </p>
         <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5">
           <div className="absolute inset-0 w-3 bg-orange-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>
-          <span className="relative text-black group-hover:text-white">Περισσότερα</span>
+          <span className="relative text-black group-hover:text-white">Περισσότερα...</span>
         </button>
       </div>
     </div>
