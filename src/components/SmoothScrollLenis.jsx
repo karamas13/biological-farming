@@ -59,8 +59,9 @@ const CenterImage = () => {
         clipPath,
         backgroundImage: `url(${farming1})`,
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundRepeat: "no-repeat",        
       }}
+      preload="auto"
     />
   );
 };
