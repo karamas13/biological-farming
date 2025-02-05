@@ -7,11 +7,20 @@ import { FaTractor } from "react-icons/fa";
 const Hero = () => {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate a 5-second loading time
+
+  // Function to handle video load complete and set minimum loading time
+  const handleVideoLoad = () => {
     setTimeout(() => {
+      setLoading(false); // Hide loading animation after 4.5 seconds minimum
+    }, 4500); // Minimum 4.5 seconds
+  };
+
+  useEffect(() => {
+    // Automatically hide the loading screen after the minimum time
+    const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 4500); // Minimum 4.5 seconds delay
+    return () => clearTimeout(timer); // Cleanup the timer
   }, []);
 
   return (
@@ -45,6 +54,8 @@ const Hero = () => {
             muted
             loop
             preload="auto"
+            onCanPlayThrough={handleVideoLoad} // Trigger when video can start playing
+
           >
             <source src={agriculture} type="video/mp4" />
           </video>
@@ -58,7 +69,7 @@ const Hero = () => {
               <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1, delay: 5.1 }}
                 className="flex flex-col items-center gap-2 text-lime-500 text-4xl sm:text-5xl md:text-6xl my-10 py-2"
               >
                 <FaTractor className="text-[#FFD700] text-5xl" />
@@ -74,7 +85,7 @@ const Hero = () => {
               <motion.h1
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -300 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 2, delay: 5.2 }}
                 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl bg-gradient-to-r from-green-800 via-lime-700 to-slate-50 bg-clip-text tracking-tight text-transparent"
               >
                 <section>Βιολογικές</section>
@@ -85,7 +96,7 @@ const Hero = () => {
               <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 100 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1, delay: 5.1 }}
                 className="flex flex-col items-center gap-2 text-3xl sm:text-5xl md:text-6xl my-10 py-2 mt-[-0.5em]"
               >
                 <span className="flex items-center justify-center sm:justify-start">
