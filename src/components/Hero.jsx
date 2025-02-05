@@ -13,8 +13,10 @@ const Hero = () => {
         autoPlay
         muted
         loop
+        rel="preload"
+        preload={agriculture}
       >
-        <source src={agriculture} type="video/mp4" />
+        <source preload={agriculture} src={agriculture} type="video/mp4" rel="preload"/>
       </video>
 
       {/* Overlay */}
