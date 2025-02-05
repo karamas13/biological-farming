@@ -11,7 +11,7 @@ const Hero = () => {
     // Simulate a 5-second loading time
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 10000);
   }, []);
 
   return (
@@ -108,8 +108,8 @@ const Hero = () => {
 
 export default Hero;
 
-const DURATION = 10;
-const STAGGER = 0.2;
+const DURATION = 2;
+const STAGGER = 0.095;
 
 const FlipText = ({ children, href }) => {
   return (
