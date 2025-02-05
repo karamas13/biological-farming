@@ -108,8 +108,8 @@ const Hero = () => {
 
 export default Hero;
 
-const DURATION = 2;
-const STAGGER = 0.095;
+const DURATION = 10;
+const STAGGER = 0.2;
 
 const FlipText = ({ children, href }) => {
   return (
