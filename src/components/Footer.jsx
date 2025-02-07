@@ -1,8 +1,8 @@
 import { FaInstagram, FaFacebook, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLeaf } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({ color }) => {
   return (
-    <div className="min-h-fit bg-slate-950 text-[#f1f1f1]">
+    <div className="min-h-fit text-[#f1f1f1]" style={{backgroundColor: color}}>
       <div className="flex flex-col lg:flex lg:flex-row md:flex md:flex-col sm:flex-row justify-between items-center sm:px-60 md:px-40 py-10">
         
         {/* Logo Section */}

@@ -2,7 +2,7 @@ import { SmoothScrollLenis } from "../components/SmoothScrollLenis";
 
 const SummerFarms = () => {
     return ( 
-     <div>
+     <div className="">
         <SmoothScrollLenis />
      </div> 
     );

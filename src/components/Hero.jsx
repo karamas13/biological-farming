@@ -67,9 +67,9 @@ const Hero = () => {
             <div className="h-full flex items-center justify-center flex-col text-center px-4 sm:px-8 lg:px-12">
               {/* BioFarms Heading Section */}
               <motion.div
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1, delay: 5.1 }}
+                transition={{ duration: 1, delay: 5 }}
                 className="flex flex-col items-center gap-2 text-lime-500 text-4xl sm:text-5xl md:text-6xl my-10 py-2"
               >
                 <FaTractor className="text-[#FFD700] text-5xl" />
@@ -83,9 +83,9 @@ const Hero = () => {
 
               {/* Hero Title */}
               <motion.h1
-                whileInView={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -300 }}
-                transition={{ duration: 2, delay: 5.2 }}
+                transition={{ duration: 2, delay: 5.1 }}
                 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl bg-gradient-to-r from-green-800 via-lime-700 to-slate-50 bg-clip-text tracking-tight text-transparent"
               >
                 <section>Βιολογικές</section>
@@ -94,9 +94,9 @@ const Hero = () => {
 
               {/* Secondary Hero Text */}
               <motion.div
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 100 }}
-                transition={{ duration: 1, delay: 5.1 }}
+                transition={{ duration: 1, delay: 5 }}
                 className="flex flex-col items-center gap-2 text-3xl sm:text-5xl md:text-6xl my-10 py-2 mt-[-0.5em]"
               >
                 <span className="flex items-center justify-center sm:justify-start">

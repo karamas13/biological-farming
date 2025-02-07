@@ -6,20 +6,27 @@ import farming2 from "/photos/farming2.jpg";
 import farming3 from "/photos/farming3.jpg";
 import farming4 from "/photos/farming4.jpg";
 import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import Product from "./Product";
+import broccoli from "/photos/broccoli.webp"
+import marouli from "/photos/marouli.png"
+import kounoupidi from "/photos/koynoupidi.png"
+import Footer from "../components/Footer";
+
 
 export const SmoothScrollLenis = () => {
   return (
-    <div className="bg-zinc-950 overflow-x-hidden sm:overflow-x-hidden lg:overflow-x-visible">
+    <div className="bg-zinc-950 overflow-x-hidden sm:overflow-x-hidden lg:overflow-x-visible ">
       <Nav />
       <Hero />
       <Details />
+      <Footer color={"#09090b"}/>
     </div>
   );
 };
 
 const Nav = () => {
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 text-[#f1f1f1]">
+    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 text-[#f1f1f1] ">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl">Logo</h1>
       <h2 className="lg:text-2xl sm:text-base">Χειμερινές Καλλιέργειες</h2>
     </nav>
@@ -30,7 +37,7 @@ const SECTION_HEIGHT = 1500;
 
 const Hero = () => {
   return (
-    <div className="relative w-full bg-zinc-950" style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}>
+    <div className="relative w-full bg-zinc-950 " style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}>
       <CenterImage />
       <ParallaxImages />
       <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" />
@@ -52,7 +59,7 @@ const CenterImage = () => {
 
   return (
     <motion.div
-      className="sticky top-0 sm:top-0 left-0 w-full h-screen bg-center bg-cover"
+      className="sticky top-0 sm:top-0 left-0 w-full h-screen bg-center bg-cover "
       style={{
         opacity,
         backgroundSize,
@@ -98,8 +105,12 @@ const ParallaxImg = ({ className, alt, src, start, end }) => {
 
 const Details = () => {
   return (
-    <div className="h-screen py-80 px-4 sm:px-8 lg:px-20 text-white">
-      <h1 className="text-4xl">Χειμερινά Προϊόντα</h1>
+    <div className="min-h-screen h-fit py-80 text-white overflow-hidden">
+      <h1 className="text-4xl text-center w-full mx-auto ">Χειμερινά Προϊόντα</h1>
+      <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Μαρούλι"} subtitle={"Λαχανικό"} src={marouli} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Κουνουπίδι"} subtitle={"Λαχανικό"} src={kounoupidi} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
     </div>
   );
 };

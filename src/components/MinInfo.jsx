@@ -29,7 +29,7 @@ const MinInfo = () => {
                         <motion.div 
                           whileInView={{opacity:1, x:0}}
                           initial={{opacity:0, x:-100}}
-                          transition={{duration:0.8}}     
+                          transition={{duration:0.8, delay:0.5}}     
                           className="w-full">
                             <h3 className="italic text-lg font-bold text-yellow-500 mb-1">Περισσότερα για εμάς...</h3>
                             <h2 className="italic font-bold text-3xl sm:text-4xl md:text-5x mb-6 text-[#f1f1f1]">Ποιοί Είμαστε;</h2>
@@ -40,7 +40,7 @@ const MinInfo = () => {
                         <motion.div 
                            whileInView={{opacity:1, x:0}}
                            initial={{opacity:0, x:-100}}
-                           transition={{duration:0.8}}  
+                           transition={{duration:0.9, delay:0.6}}  
                           className="flex flex-col sm:flex-row mt-8 sm:mt-4 py-20">
                             <div className="">
                                 <h3 className=" font-bold italic text-lg mb-2 text-[#f1f1f1]">Εξειδικευμένες Καλλιέργειες</h3>
@@ -92,14 +92,14 @@ const MinInfo = () => {
                    className="md:flex md:flex-col flex flex-col lg:flex lg:flex-row justify-center items-center gap-40 md:gap-12 lg:gap-24">
             
                     <motion.div 
-                     variants={iconVariants(3)}
+                     variants={iconVariants(5)}
                      initial="initial"
                      animate="animate"
-                     className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] bg-white z-10">
+                     className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
                       <div className="flex flex-col justify-center items-center">
                         <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
-                        <div className="w-full h-[10em] text-center bg-green-50 rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
+                        <div className="w-full h-[10em] text-center bg-green-950 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1">Quality</h3>
                           <p className="text-sm sm:text-base">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
@@ -111,11 +111,11 @@ const MinInfo = () => {
                      variants={iconVariants(3)}
                      initial="initial"
                      animate="animate"
-                     className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] bg-white z-10">
+                     className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
                       <div className="flex flex-col justify-center items-center">
                         <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
-                        <div className="w-full h-[10em] text-center bg-green-50 rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
+                        <div className="w-full h-[10em] text-center bg-green-950 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1">Quality</h3>
                           <p className="text-sm sm:text-base">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
@@ -124,14 +124,14 @@ const MinInfo = () => {
                       </div>
                     </motion.div>
                     <motion.div 
-                     variants={iconVariants(3)}
+                     variants={iconVariants(7)}
                      initial="initial"
                      animate="animate"
-                     className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] bg-white z-10">
+                     className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
                       <div className="flex flex-col justify-center items-center">
                         <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
-                        <div className="w-full h-[10em] text-center bg-green-50 rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
+                        <div className="w-full h-[10em] text-center bg-green-950 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1">Quality</h3>
                           <p className="text-sm sm:text-base">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
