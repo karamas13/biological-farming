@@ -5,20 +5,21 @@ import Hero from "../components/Hero";
 import PowerCards from "../components/PowerCards";
 import FarmsSection from "../components/FarmsSection";
 import Footer from "../components/Footer";
+import ReactLenis, { Lenis } from "lenis/react";
 
 const HomePage = () => {
     return ( 
         
          <div className="overflow-x-hidden font-serif scrollbar-thin scrollbar-track-green-950 scrollbar-thumb-lime-700 h-32 min-h-screen">
-           
-           <Hero />
-           
-           <MinInfo />
-
-           <FarmsSection />    
-
-           <Footer color={"#020617"}/>      
+          
+            <Hero />
             
+            <MinInfo />
+ 
+            <FarmsSection />    
+ 
+            <Footer color={"#020617"}/>      
+
          </div>
         
      );

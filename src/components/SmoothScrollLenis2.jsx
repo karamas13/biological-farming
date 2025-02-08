@@ -18,7 +18,7 @@ import ReactLenis, { Lenis } from "lenis/react";
 
 
 
-export const SmoothScrollLenis = () => {
+export const SmoothScrollLenis2 = () => {
   
   const nav = useNavigate();
   
@@ -39,7 +39,7 @@ const Nav = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 text-[#f1f1f1] ">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl">Logo</h1>
-      <h2 className="flex lg:text-3xl md:text-2xl text-xl bg-gradient-to-r from-blue-700 via-sky-700 to-slate-50 bg-clip-text tracking-tight text-transparent"> Χειμερινές Καλλιέργειες</h2>      
+      <h2 className="flex lg:text-3xl md:text-2xl text-xl bg-gradient-to-r from-orange-700 via-yellow-700 to-yellow-50 bg-clip-text tracking-tight text-transparent"> Θερινές Καλλιέργειες</h2>      
     </nav>
   );
 };

@@ -49,7 +49,7 @@ const FarmsSection = () => {
         <p className="px-4 sm:px-10 py-4 text-white text-center text-lg">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, voluptatibus, animi eaque nam distinctio illum tempora, omnis repellat nobis adipisci aliquam?
         </p>
-        <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5">
+        <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5" onClick={() => navigate("/SummerFarms")}>
           <div className="absolute inset-0 w-3 bg-orange-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>
           <span className="relative text-black group-hover:text-white">Περισσότερα...</span>
         </button>
@@ -78,7 +78,7 @@ const FarmsSection = () => {
         <p className="px-4 sm:px-10 py-4 text-white text-center text-lg">
           Lorem ipsum dolor sit amet consectetur Ex cupiditate amet deleniti veritatis quisquam quibusdam eius doloremque sapiente? Blanditiis esse beatae quod consequatur? 
         </p>
-        <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5" onClick={() => navigate("/SummerFarms")}>
+        <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5" onClick={() => navigate("/WinterFarms")}>
           <div className="absolute inset-0 w-3 bg-blue-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>
           <span className="relative text-black group-hover:text-white">Περισσότερα</span>
         </button>
