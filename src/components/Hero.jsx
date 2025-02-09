@@ -24,7 +24,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="overflow-x-hidden font-serif h-screen relative">
+    <div className="overflow-x-hidden font-serif h-screen relative scroll-smooth">
       {/* Page Loading Animation */}
      {loading && 
         <div className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center z-50 bg-stone-950  bg-opacity-100 overscroll-y-contain">
@@ -49,7 +49,7 @@ const Hero = () => {
           <NavBar />
           {/* Hero Section */}
           <video
-            className="h-full w-full object-cover absolute top-0 left-0 z-0"
+            className="h-full w-full object-cover absolute top-0 left-0 z-0 "
             autoPlay
             muted
             loop
@@ -61,9 +61,9 @@ const Hero = () => {
           </video>
 
           {/* Overlay */}
-          <div className="absolute inset-0 w-full h-full bg-stone-950 opacity-10 z-10"></div>
+          <div className="absolute inset-0 w-full h-full bg-stone-950 opacity-10 z-10 "></div>
 
-          <div className="bg-stone-950 bg-opacity-80 backdrop-saturate-200 backdrop-contrast-100 h-screen w-screen flex justify-center items-center z-20 absolute">
+          <div className="bg-stone-950 bg-opacity-80 backdrop-saturate-200 backdrop-contrast-100 h-screen w-screen flex justify-center items-center z-20 absolute ">
             <div className="h-full flex items-center justify-center flex-col text-center px-4 sm:px-8 lg:px-12">
               {/* BioFarms Heading Section */}
               <motion.div

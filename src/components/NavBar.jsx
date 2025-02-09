@@ -1,4 +1,5 @@
 import { FaTractor } from "react-icons/fa";
+import AboutUs from '../pages/AboutUs';
 
 const NavBar = () => {
   return ( 
@@ -11,8 +12,8 @@ const NavBar = () => {
           <div className="text-center tracking-tighter">
            <div className="flex justify-center items-center lg:gap-20 lg:text-[1.5em] text-[0.8em] text-white gap-6 lg:mr-20 mr-1">
             <a href="#" className="hover:text-lime-500 transition ease-in-out duration-[0.7s]">Farms</a>
-            <a href="#" className="hover:text-lime-500 transition ease-in-out duration-[0.7s]">Contact</a>
-            <a href="#" className="hover:text-lime-500 transition ease-in-out duration-[0.7s]">Info</a>        
+            <a href="/AboutUs" className="hover:text-lime-500 transition ease-in-out duration-[0.7s]">AboutUs</a>
+            <a href="#" className="hover:text-lime-500 transition ease-in-out duration-[0.7s]">Contact</a>        
            </div>
           </div>
         </div>

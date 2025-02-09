@@ -32,10 +32,10 @@ const Footer = ({ color }) => {
               <section className="w-1 h-1 border-[3px] border-green-900 rounded-full ml-2"></section>
             </span>
           </h2>
-          <div className="text-lg sm:text-xl flex flex-col items-center sm:items-start">
-            <section className="py-1 flex items-center gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
+          <div className="text-lg sm:text-xl flex flex-col sm:items-start ">
+            <section className="py-1 flex items-center  gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
               <FaLeaf />
-              <a className="cursor-pointer">About Us</a>               
+              <a className="cursor-pointer">AboutUs</a>               
             </section>
             <section className="py-1 flex items-center gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
               <FaLeaf />
