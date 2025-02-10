@@ -35,19 +35,19 @@ const Footer = ({ color }) => {
           <div className="text-lg sm:text-xl flex flex-col sm:items-start ">
             <section className="py-1 flex items-center  gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
               <FaLeaf />
-              <a className="cursor-pointer">AboutUs</a>               
+              <a href="/Farms" className="cursor-pointer">Farms</a>               
             </section>
             <section className="py-1 flex items-center gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
               <FaLeaf />
-              <a className="cursor-pointer">Contact</a>               
+              <a href="/AboutUs" className="cursor-pointer">AboutUs</a>               
             </section>
             <section className="py-1 flex items-center gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
               <FaLeaf />
-              <a className="cursor-pointer">Info</a>               
+              <a href="/Contact" className="cursor-pointer">Contact</a>               
             </section>
             <section className="py-1 flex items-center gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
               <FaLeaf />
-              <a className="cursor-pointer">More</a>               
+              <a href="/" className="cursor-pointer">Home</a>               
             </section>
           </div>
         </div>

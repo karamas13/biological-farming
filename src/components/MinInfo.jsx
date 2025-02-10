@@ -4,6 +4,8 @@ import haybale from "/photos/haybale.jpg"
 import { motion } from "framer-motion";
 import { FaAppleAlt,  FaTractor } from "react-icons/fa";
 import { IoIosNutrition } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+
 
 
 const MinInfo = () => {
@@ -19,6 +21,8 @@ const MinInfo = () => {
             }
         }
       });
+
+      const navigate = useNavigate();
     
     return ( 
         <div className="min-h-screen bg-crops bg-cover object-cover bg-no-repeat font-serif relative">
@@ -48,9 +52,19 @@ const MinInfo = () => {
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore totam delectus facilis labore aliquam maiores laudantium sint eum dicta quod!
                                 </p>
                             </div>
+                            
                            
                         </motion.div>
+                         <motion.button
+                         whileInView={{opacity:1, x:0}}
+                         initial={{opacity:0, x:-100}}
+                         transition={{duration:0.9, delay:0.6}} 
+                         className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5" onClick={() => navigate("/AboutUs")}>
+                          <div className="absolute inset-0 w-3 bg-green-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>
+                          <span className="relative text-black group-hover:text-white">Περισσότερα</span>
+                         </motion.button>
                     </div>
+                    
 
                     <div className="flex justify-between gap-6 py-6 sm:w-1/2 flex-wrap sm:flex-nowrap px-10">
                         <motion.img

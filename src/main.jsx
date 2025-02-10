@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import WinterFarms from './pages/WinterFarms'
 import SummerFarms from './pages/SummerFarms'
 import AboutUs from './pages/AboutUs';
+import Farms from './pages/Farms';
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path:"/AboutUs",
     element:<AboutUs className="scrollbar-thin h-32 min-h-full scr"/>
+  },
+  {
+    path:"/Farms",
+    element:<Farms className="scrollbar-thin h-32 min-h-full scr"/>
   },
 ]);
 
