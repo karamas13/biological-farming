@@ -15,6 +15,7 @@ import { IoMdSnow } from "react-icons/io";
 import { FaAngleLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import ReactLenis, { Lenis } from "lenis/react";
+import HomeButton from "./HomeButton"; 
 
 
 
@@ -30,7 +31,7 @@ export const SmoothScrollLenis2 = () => {
       <Details />
       <Footer color={"#09090b"}/>
       </ReactLenis>
-      <button onClick={()=> {nav("/")}} className=" font-mono flex items-center fixed bottom-0 left-0 text-[#333] m-2 md:m-4 lg:m-6 bg-[#f1f1f1] py-2 px-4 rounded-full opacity-65 text-lg md:text-2xl lg:text-3xl hover:opacity-100 transition ease in out duration-[0.6s]"><FaAngleLeft />Back</button>
+      <HomeButton />
     </div>
   );
 };

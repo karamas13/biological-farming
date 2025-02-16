@@ -7,6 +7,7 @@ import WinterFarms from './pages/WinterFarms'
 import SummerFarms from './pages/SummerFarms'
 import AboutUs from './pages/AboutUs';
 import Farms from './pages/Farms';
+import Contact from './pages/Contact';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path:"/Farms",
     element:<Farms className="scrollbar-thin h-32 min-h-full scr"/>
+  },
+  {
+    path:"/Contact",
+    element:<Contact className="scrollbar-thin h-32 min-h-full scr"/>
   },
 ]);
 

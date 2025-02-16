@@ -70,7 +70,7 @@ const Footer = ({ color }) => {
       </div>
 
       {/* Footer bottom */}
-      <h4 className="text-center py-5 text-sm sm:text-base">© 2025 websitename.com All rights reserved | Designed and Developed by <a href="https://nickkaramaroudisdev.com/" target="_blank" className="underline">Nick Karamaroudis</a></h4>
+      <h4 className="text-center py-5 text-sm sm:text-base px-1">© 2025 websitename.com All rights reserved | Designed and Developed by <a href="https://nickkaramaroudisdev.com/" target="_blank" className="underline">Nick Karamaroudis</a></h4>
     </div>
   );
 }
