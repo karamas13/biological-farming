@@ -16,6 +16,27 @@ import { FaAngleLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import ReactLenis, { Lenis } from "lenis/react";
 import HomeButton from "./HomeButton"; 
+import kolokythi1 from "/photos/Kolokythi1.avif";
+import kolokythi2 from "/photos/Kolokythi2.avif";
+import kolokythi3 from "/photos/Kolokythi3.avif";
+import kolokythi4 from "/photos/Kolokythi4.avif";
+import kolokythi5 from "/photos/Kolokythi5.avif";
+import kolokythi6 from "/photos/Kolokythi6.avif";
+import kolokythi7 from "/photos/Kolokythi7.avif";
+import kolokythi8 from "/photos/Kolokythi8.avif";
+import zucchini from "/photos/zucchini.avif";
+import kalampoki1 from "/photos/Kalampoki1.avif";
+import kalampoki2 from "/photos/Kalampoki2.avif";
+import kalampoki3 from "/photos/Kalampoki3.avif";
+import kalampoki4 from "/photos/Kalampoki4.avif";
+import kalampoki5 from "/photos/Kalampoki5.avif";
+import corn from "/photos/corn.webp";
+import laxano from "/photos/laxano.avif";
+import goggulokramvh1 from "/photos/goggulokramvh1.avif";
+import goggulokramvh2 from "/photos/goggulokramvh2.avif";
+import goggulokramvh3 from "/photos/goggulokramvh3.avif";
+import goggulokramvh4 from "/photos/goggulokramvh4.avif";
+import goggulokramvh5 from "/photos/goggulokramvh5.avif";
 
 
 
@@ -76,7 +97,7 @@ const CenterImage = () => {
         opacity,
         backgroundSize,
         clipPath,
-        backgroundImage: `url(${farming1})`,
+        backgroundImage: `url(${kolokythi6})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",        
       }}
@@ -88,10 +109,10 @@ const CenterImage = () => {
 const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 pt-[200px] sm:pt-[150px]">
-      <ParallaxImg src={farming} alt="Farming Example 1" start={-200} end={200} className="w-full sm:w-1/3" />
-      <ParallaxImg src={farming2} alt="Farming Example 2" start={200} end={-250} className="mx-auto w-full sm:w-2/3" />
-      <ParallaxImg src={farming3} alt="Farming Example 3" start={-200} end={200} className="w-full sm:w-1/3 ml-auto" />
-      <ParallaxImg src={farming4} alt="Farming Example 4" start={-200} end={-200} className=" w-full sm:w-5/12" />
+      <ParallaxImg src={kalampoki5} alt="Farming Example 1" start={-200} end={200} className="w-full sm:w-1/3 h-[20em] object-cover" />
+      <ParallaxImg src={kolokythi2} alt="Farming Example 2" start={200} end={-250} className="mx-auto w-full sm:w-2/3 h-[35em] object-cover" />
+      <ParallaxImg src={goggulokramvh5} alt="Farming Example 3" start={-200} end={200} className="w-full sm:w-1/3 ml-auto h-[20em] object-cover" />
+      <ParallaxImg src={kolokythi5} alt="Farming Example 4" start={-200} end={-200} className=" w-full sm:w-5/12 h-[20em] object-cover" />
     </div>
   );
 };
@@ -118,10 +139,10 @@ const ParallaxImg = ({ className, alt, src, start, end }) => {
 const Details = () => {
   return (
     <div className="min-h-screen h-fit py-80 text-white overflow-hidden">
-      <h1 className="text-4xl text-center w-full mx-auto ">Χειμερινά Προϊόντα</h1>
-      <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
-      <Product title={"Μαρούλι"} subtitle={"Λαχανικό"} src={marouli} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]}description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
-      <Product title={"Κουνουπίδι"} subtitle={"Λαχανικό"} src={kounoupidi} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <h1 className="text-4xl text-center w-full mx-auto ">Θερινά Προϊόντα</h1>
+      <Product title={"Κολοκύθι"} subtitle={"Λαχανικό"} src={zucchini} additionalImages={[kolokythi1, kolokythi4, kolokythi7, kolokythi8 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Καλαμπόκι"} subtitle={"Λαχανικό"} src={corn} additionalImages={[kalampoki1, kalampoki2, kalampoki3, kalampoki4 ]}description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Γογγυλοκράμβη"} subtitle={"Λαχανικό"} src={laxano} additionalImages={[goggulokramvh1, goggulokramvh2, goggulokramvh3, goggulokramvh4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
       <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli}  additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
     </div>
   );

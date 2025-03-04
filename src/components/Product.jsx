@@ -50,20 +50,22 @@ const Product = ({ src, additionalImages, description, title, subtitle }) => {
 
       {/* Additional Images Section */}
       <AnimatePresence>
+      
         {showImages && (
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 px-2 relative"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 px-2 relative p-10 w-[75%] h-fit "
           >
-            <button  onClick={() => setShowImages(!showImages)} className="top-0 left-0 absolute"><FaTimes className="text-3xl"/></button>
+        <button  onClick={() => setShowImages(!showImages)} className="top-0 left-0 absolute"><FaTimes className="text-3xl"/></button>
             {additionalImages.map((image, index) => (
               <motion.img
                 key={index}
                 src={image}
-                className="h-[10em] sm:h-[12em] object-cover rounded-lg cursor-pointer"
+                className="sm:h-[20em] object-cover rounded-lg cursor-pointer w-full sm:w-full md:w-full "
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}

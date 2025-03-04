@@ -16,6 +16,16 @@ import { FaAngleLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import ReactLenis, { Lenis } from "lenis/react";
 import HomeButton from "./HomeButton";
+import laxano from "/photos/laxano.avif";
+import goggulokramvh1 from "/photos/goggulokramvh1.avif";
+import goggulokramvh2 from "/photos/goggulokramvh2.avif";
+import goggulokramvh3 from "/photos/goggulokramvh3.avif";
+import goggulokramvh4 from "/photos/goggulokramvh4.avif";
+import goggulokramvh5 from "/photos/goggulokramvh5.avif";
+import olive from "/photos/olive.webp";
+import ellies1 from "/photos/Ellies1.avif";
+import ellies2 from "/photos/Ellies2.avif";
+
 
 
 
@@ -119,8 +129,8 @@ const Details = () => {
   return (
     <div className="min-h-screen h-fit py-80 text-white overflow-hidden">
       <h1 className="text-4xl text-center w-full mx-auto ">Χειμερινά Προϊόντα</h1>
-      <Product title={"Μπρόκολλο"}  subtitle={"Λαχανικό"} src={broccoli} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
-      <Product title={"Μαρούλι"} subtitle={"Λαχανικό"} src={marouli} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Γογγυλοκράμβη"} subtitle={"Λαχανικό"} src={laxano} additionalImages={[goggulokramvh1, goggulokramvh2, goggulokramvh3, goggulokramvh4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Ελλιά"} subtitle={"Λαχανικό"} src={olive} additionalImages={[ellies1, ellies2 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
       <Product title={"Κουνουπίδι"} subtitle={"Λαχανικό"} src={kounoupidi} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
       <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
     </div>
