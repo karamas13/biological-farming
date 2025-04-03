@@ -1,19 +1,13 @@
-import { SiSpacex } from "react-icons/si";
 import { useRef, useState, useEffect } from "react";
-import farming from "/photos/farming.jpg";
 import farming1 from "/photos/farming1.jpg";
-import farming2 from "/photos/farming2.jpg";
-import farming3 from "/photos/farming3.jpg";
-import farming4 from "/photos/farming4.jpg";
 import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import Product from "./Product";
 import broccoli from "/photos/broccoli.webp"
 import marouli from "/photos/marouli.png"
 import kounoupidi from "/photos/koynoupidi.png"
 import Footer from "../components/Footer";
-import { IoMdSnow } from "react-icons/io";
-import { FaAngleLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import logo from "/photos/logo.avif";
 import ReactLenis, { Lenis } from "lenis/react";
 import HomeButton from "./HomeButton"; 
 import kolokythi1 from "/photos/Kolokythi1.avif";
@@ -37,7 +31,26 @@ import goggulokramvh2 from "/photos/goggulokramvh2.avif";
 import goggulokramvh3 from "/photos/goggulokramvh3.avif";
 import goggulokramvh4 from "/photos/goggulokramvh4.avif";
 import goggulokramvh5 from "/photos/goggulokramvh5.avif";
-
+import piperia from "/photos/piperia.avif"
+import piperies1 from "/photos/piperies1.avif";
+import piperies2 from "/photos/piperies2.avif";
+import piperies3 from "/photos/piperies3.avif";
+import piperies4 from "/photos/piperies4.avif";
+import piperiesextra1 from "/photos/piperiesextra1.avif";
+import piperiesextra2 from "/photos/piperiesextra2.avif";
+import tomata from "/photos/tomata.avif"
+import tomates1 from "/photos/tomates1.avif";
+import tomates2 from "/photos/tomates2.avif";
+import tomates3 from "/photos/tomates3.avif";
+import tomates4 from "/photos/tomates4.avif";
+import tomatesextra1 from "/photos/tomatesextra1.avif";
+import tomatesextra2 from "/photos/tomatesextra2.avif";
+import tomatesextra3 from "/photos/tomatesextra3.avif";
+import melitzana from "/photos/melitzana.avif"
+import melitzanes1 from "/photos/melitzanes1.avif";
+import melitzanes2 from "/photos/melitzanes2.avif";
+import melitzanes3 from "/photos/melitzanes3.avif";
+import melitzanes4 from "/photos/melitzanes4.avif";
 
 
 export const SmoothScrollLenis2 = () => {
@@ -60,7 +73,7 @@ export const SmoothScrollLenis2 = () => {
 const Nav = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 text-[#f1f1f1] ">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl">Logo</h1>
+      <img src={logo} className="h-[8.5em]"/>
       <h2 className="flex lg:text-3xl md:text-2xl text-xl bg-gradient-to-r from-orange-700 via-yellow-700 to-yellow-50 bg-clip-text tracking-tight text-transparent"> Θερινές Καλλιέργειες</h2>      
     </nav>
   );
@@ -141,9 +154,11 @@ const Details = () => {
     <div className="min-h-screen h-fit py-80 text-white overflow-hidden">
       <h1 className="text-4xl text-center w-full mx-auto ">Θερινά Προϊόντα</h1>
       <Product title={"Κολοκύθι"} subtitle={"Λαχανικό"} src={zucchini} additionalImages={[kolokythi7, kolokythi8, kolokythi1, kolokythi4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
-      <Product title={"Καλαμπόκι"} subtitle={"Λαχανικό"} src={corn} additionalImages={[kalampoki3, kalampoki1, kalampoki4, kalampoki5 ]}description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Καλαμπόκι"} subtitle={"Σιτηρό"} src={corn} additionalImages={[kalampoki3, kalampoki1, kalampoki4, kalampoki5 ]}description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
       <Product title={"Γογγυλοκράμβη"} subtitle={"Λαχανικό"} src={laxano} additionalImages={[goggulokramvh1, goggulokramvh4, goggulokramvh3, goggulokramvh2 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
-      <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli}  additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Πιπεριές"} subtitle={"Λαχανικό"} src={piperia}  additionalImages={[piperies1, piperies2, piperies3, piperies4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Τομάτες"} subtitle={"Εσπεριδοειδές"} src={tomata}  additionalImages={[tomates1, tomates2, tomates3, tomates4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Μελιτζάνες"} subtitle={"Λαχανικό"} src={melitzana}  additionalImages={[melitzanes1, melitzanes2, melitzanes3, melitzanes4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
     </div>
   );
 };

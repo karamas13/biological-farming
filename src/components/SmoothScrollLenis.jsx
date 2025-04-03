@@ -25,6 +25,16 @@ import goggulokramvh5 from "/photos/goggulokramvh5.avif";
 import olive from "/photos/olive.webp";
 import ellies1 from "/photos/Ellies1.avif";
 import ellies2 from "/photos/Ellies2.avif";
+import logo from "/photos/logo.avif";
+import mprokolo1 from "/photos/mprokolo1.avif";
+import mprokolo2 from "/photos/mprokolo2.avif";
+import mprokolo3 from "/photos/mprokolo3.avif";
+import mprokolo4 from "/photos/mprokolo4.avif";
+import lemoni from "/photos/lemoni.avif";
+import lemonia1 from "/photos/lemonia1.avif";
+import lemonia2 from "/photos/lemonia2.avif";
+import lemonia3 from "/photos/lemonia3.avif";
+import lemonia4 from "/photos/lemonia4.avif";
 
 
 
@@ -49,7 +59,7 @@ export const SmoothScrollLenis = () => {
 const Nav = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 text-[#f1f1f1] ">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl">Logo</h1>
+      <img src={logo} className="h-[8.5em] "/>
       <h2 className="flex lg:text-3xl md:text-2xl text-xl bg-gradient-to-r from-blue-700 via-sky-700 to-slate-50 bg-clip-text tracking-tight text-transparent"> Χειμερινές Καλλιέργειες</h2>      
     </nav>
   );
@@ -130,9 +140,9 @@ const Details = () => {
     <div className="min-h-screen h-fit py-80 text-white overflow-hidden">
       <h1 className="text-4xl text-center w-full mx-auto ">Χειμερινά Προϊόντα</h1>
       <Product title={"Γογγυλοκράμβη"} subtitle={"Λαχανικό"} src={laxano} additionalImages={[goggulokramvh1, goggulokramvh4, goggulokramvh3, goggulokramvh2 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
-      <Product title={"Ελλιά"} subtitle={"Λαχανικό"} src={olive} additionalImages={[ellies1, ellies2 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
-      <Product title={"Κουνουπίδι"} subtitle={"Λαχανικό"} src={kounoupidi} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
-      <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli} additionalImages={[marouli, kounoupidi, broccoli, farming1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Ελλιά"} subtitle={"Δρύπη"} src={olive} additionalImages={[ellies1, ellies2 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli} additionalImages={[mprokolo1, mprokolo2, mprokolo3, mprokolo4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Λεμόνι"} subtitle={"Εσπεριδοειδές"} src={lemoni} additionalImages={[lemonia1, lemonia2, lemonia3, lemonia4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
     </div>
   );
 };
