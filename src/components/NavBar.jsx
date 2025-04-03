@@ -1,12 +1,12 @@
 import { FaTractor } from "react-icons/fa";
+import logo from "/photos/logo.avif";
 
 
 const NavBar = () => {
   return ( 
-      <nav className="flex items-center justify-between py-5 bg-transparent font-serif absolute z-30 lg:w-[99%] md:w-[97%] w-[95%]">
+      <nav className="flex items-center justify-between py-15 bg-transparent font-serif absolute z-30 lg:w-[99%] md:w-[97%] w-[95%]">
         <div className="flex flex-shrink-0 items-center px-4 gap-2 text-lime-500 lg:text-4xl">
-          <FaTractor className="text-[#FFD700]"/>
-          <h1 className="">BioFarms</h1>
+          <img src={logo} className="h-[4em] "/>
         </div>
         <div className="flex items-center justify-center lg:pr-0 md:pr-10 pr-10">
           <div className="text-center tracking-tighter">

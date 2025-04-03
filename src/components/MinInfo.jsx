@@ -37,8 +37,10 @@ const MinInfo = () => {
                           className="w-full">
                             <h3 className="italic text-lg font-bold text-yellow-500 mb-1">Περισσότερα για εμάς...</h3>
                             <h2 className="italic font-bold text-3xl sm:text-4xl md:text-5x mb-6 text-[#f1f1f1]">Ποιοί Είμαστε;</h2>
-                            <p className="text-base sm:text-lg lg:w-[80%] text-[#f1f1f1]">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum laudantium, ad dignissimos, quis nesciunt quae vitae amet maxime modi eveniet animi inventore expedita assumenda non perspiciatis ducimus iusto blanditiis? Magnam laudantium aliquam maxime adipisci non a facere sint sed veritatis soluta. Placeat!
+                            <p className="text-base sm:text-md lg:w-[80%] text-[#f1f1f1]">
+                            Η οικογένεια Γκότζη, γεννημένη και μεγαλωμένη στην πανέμορφη Κόρινθο και στην ορεινή Κορινθία, (Κάτω από το Αυλάκι) έχει βαθιές ρίζες στην αγροτική παραγωγή. Από γενιά σε γενιά, για πάνω από 70 χρόνια, ασχολούμαστε με την ολοκληρωμένη καλλιέργεια και πλέον, εδώ και 8 χρόνια, έχουμε επενδύσει με πάθος και αφοσίωση στη βιολογική παραγωγή.
+                            <br className=""></br>
+                            Η παραγωγή μας βασίζεται στην υπαίθρια καλλιέργεια και καλύπτει μια ευρεία γκάμα προϊόντων τόσο για τη θερινή όσο και για τη χειμερινή περίοδο. Στις θερινές καλλιέργειες μας θα βρείτε ντόπιες ντομάτες, αγγούρια, κολοκύθια, πιπεριές, μελιτζάνες, καλαμπόκι, μαρούλια, κρεμμύδια και πολλά ακόμη. Για τον χειμώνα, έχουμε μπρόκολα, κουνουπίδια, γογγυλοκράμβη (γουλί-ρεβά), λάχανα και άλλα φρέσκα προϊόντα από τις καλλιέργειές μας.
                             </p>
                         </motion.div>
                         <motion.div 
@@ -46,10 +48,9 @@ const MinInfo = () => {
                            initial={{opacity:0, x:-100}}
                            transition={{duration:0.9, delay:0.6}}  
                           className="flex flex-col sm:flex-row mt-8 sm:mt-4 py-20">
-                            <div className="">
-                                <h3 className=" font-bold italic text-lg mb-2 text-[#f1f1f1]">Εξειδικευμένες Καλλιέργειες</h3>
-                                <p className="text-base sm:text-lg text-[#f1f1f1]">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore totam delectus facilis labore aliquam maiores laudantium sint eum dicta quod!
+                            <div className="">                            
+                                <p className="text-base sm:text-md text-[#f1f1f1]">
+                                Μπορείτε να μάθετε περισσότερα για εμάς μέσω των social media ή να συναντηθούμε από κοντά στις βιολογικές αγορές Αττικής, όπου θα χαρούμε να σας γνωρίσουμε και να σας παρουσιάσουμε τα προϊόντα μας. Οι αγορές μας είναι, κάθε Δευτέρα στην Κηφισιά, Πέμπτη στον Κορυδαλλό πλατεία Ελευθερίου Βενιζέλου, Παρασκευή στην Αργυρούπολη πλησίον κολυμβητηρίου και Σάββατο στο Ίλιον, μπροστά από το πάρκο Τρίτση, από μεριά Λ. δημοκρατίας
                                 </p>
                             </div>
                             
@@ -114,7 +115,7 @@ const MinInfo = () => {
                         <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
-                          <h3 className="text-2xl font-bold py-1">Quality</h3>
+                          <h3 className="text-2xl font-bold py-1">Καλλιέργειες</h3>
                           <p className="text-sm sm:text-base">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
                           </p>
@@ -130,7 +131,7 @@ const MinInfo = () => {
                         <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
-                          <h3 className="text-2xl font-bold py-1">Quality</h3>
+                          <h3 className="text-2xl font-bold py-1">Βιολογικές Αγορές</h3>
                           <p className="text-sm sm:text-base">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
                           </p>
@@ -146,7 +147,7 @@ const MinInfo = () => {
                         <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
-                          <h3 className="text-2xl font-bold py-1">Quality</h3>
+                          <h3 className="text-2xl font-bold py-1"></h3>
                           <p className="text-sm sm:text-base">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
                           </p>

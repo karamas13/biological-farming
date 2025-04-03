@@ -3,6 +3,7 @@ import { easeInOut, motion } from "framer-motion";
 import agriculture from "/photos/agriculture.mp4";
 import NavBar from "./NavBar";
 import { FaTractor } from "react-icons/fa";
+import logo from "/photos/logo.avif";
 
 const Hero = () => {
   const [loading, setLoading] = useState(true);
@@ -29,9 +30,11 @@ const Hero = () => {
      {loading && 
         <div className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center z-50 bg-stone-950  bg-opacity-100 overscroll-y-contain">
           <section className="grid gap-2 text-lime-400 font-serif py-10 text-center">
-            <FlipText>Welcome</FlipText>
-            <FlipText>To Biofarms</FlipText>
-            <FlipText>Website</FlipText>
+          <img src={logo} className="h-[15em] mx-auto"/>
+            <FlipText>ΚΑΤΩ</FlipText>
+            <FlipText>ΑΠ' ΤΟ</FlipText>
+            <FlipText>ΑΥΛΑΚΙ</FlipText>
+           
           </section>
         <div role="status" className="shadow-2xl shadow-lime-500 rounded-full h-fit w-fit">
             <svg aria-hidden="true" className="w-24 h-24 text-white animate-spin fill-lime-500 " viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ animationDuration: '0.4s'}}>
@@ -63,20 +66,19 @@ const Hero = () => {
           {/* Overlay */}
           <div className="absolute inset-0 w-full h-full bg-stone-950 opacity-10 z-10 "></div>
 
-          <div className="bg-stone-950 bg-opacity-80 backdrop-saturate-200 backdrop-contrast-100 h-screen w-screen flex justify-center items-center z-20 absolute ">
+          <div className="bg-stone-950 bg-opacity-80 backdrop-saturate-200 backdrop-contrast-100 h-screen w-screen flex justify-center items-center z-20 absolute pt-20">
             <div className="h-full flex items-center justify-center flex-col text-center px-4 sm:px-8 lg:px-12">
               {/* BioFarms Heading Section */}
               <motion.div
                 animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: 1, delay: 5 }}
-                className="flex flex-col items-center gap-2 text-lime-500 text-4xl sm:text-5xl md:text-6xl my-10 py-2"
+                className="flex flex-col items-center text-lime-500 text-4xl sm:text-5xl md:text-6xl my-10 py-2"
               >
-                <FaTractor className="text-[#FFD700] text-5xl" />
-                <h1 className="text-xl sm:text-2xl lg:text-3xl">BioFarms</h1>
+                
                 <span className="flex items-center justify-center sm:justify-start">
                   <section className="w-1 h-1 border-[3px] border- rounded-full mr-2"></section>
-                  <section className="w-[6em] border-b-[3px] border-white rounded-2xl my-4"></section>
+                  <section className="w-[6em] border-b-[3px] border-white rounded-2xl"></section>
                   <section className="w-1 h-1 border-[3px] border-white rounded-full ml-2"></section>
                 </span>
               </motion.div>
@@ -88,8 +90,7 @@ const Hero = () => {
                 transition={{ duration: 2, delay: 5.1 }}
                 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl bg-gradient-to-r from-green-800 via-lime-700 to-slate-50 bg-clip-text tracking-tight text-transparent"
               >
-                <section>Βιολογικές</section>
-                <section className="h-[2em] w-[6em]">Καλλιέργειες</section>
+                <img src={logo} className="h-[6em] opacity-80 mb-[-1.8em] mt-[-1em]"/>
               </motion.h1>
 
               {/* Secondary Hero Text */}
@@ -97,15 +98,15 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 100 }}
                 transition={{ duration: 1, delay: 5 }}
-                className="flex flex-col items-center gap-2 text-3xl sm:text-5xl md:text-6xl my-10 py-2 mt-[-0.5em]"
+                className="flex flex-col items-center gap-2 text-3xl sm:text-5xl md:text-6xl my-10 py-2"
               >
                 <span className="flex items-center justify-center sm:justify-start">
-                  <section className="w-1 h-1 border-[3px] border- rounded-full mr-2"></section>
+                  <section className="w-1 h-1 border-[3px] border- rounded-full mr-2 "></section>
                   <section className="w-[10em] border-b-[3px] border-white rounded-2xl my-4"></section>
                   <section className="w-1 h-1 border-[3px] border-white rounded-full ml-2"></section>
                 </span>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#f1f1f1] py-4">
-                  Φυσικά Προϊόντα
+                <h2 className="lg:text-6xl sm:text-4xl md:text-6xl text-[#f1f1f1] py-4  bg-gradient-to-r from-green-800 via-lime-700 to-slate-50 bg-clip-text tracking-tight text-transparent">
+                  Βιολογικές Καλλιέργειες
                 </h2>
               </motion.div>
             </div>

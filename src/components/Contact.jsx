@@ -2,10 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiGithub, SiTiktok, SiInstagram, SiYoutube } from "react-icons/si";
+import { SiGithub, SiTiktok, SiInstagram, SiYoutube, SiFacebook } from "react-icons/si";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import HomeButton from "./HomeButton";
+import logo from "/photos/logo.avif";
 
  const ContactUs = () => {
   return (
@@ -65,9 +66,9 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
     <img
-      src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
+      src={logo}
       alt="avatar"
-      className="mb-4 size-14 rounded-full"
+      className="size-[10em] rounded-full mx-auto"
     />
     <h1 className="mb-12 text-3xl font-medium leading-tight font-mono">
       Βιολογικές Καλλιέργειες.{" "}
@@ -91,53 +92,29 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-red-500 md:col-span-3"
+      className="col-span-6 bg-blue-500 md:col-span-3 h-[16em]"
     >
       <a
-        href="#"
+        href="https://www.facebook.com/profile.php?id=61573650190967"
         className="grid h-full place-content-center text-3xl text-white"
+        target="blank"
       >
-        <SiYoutube />
+        <SiFacebook />
       </a>
     </Block>
-    <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-green-600 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <SiGithub />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-zinc-50 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-black"
-      >
-        <SiTiktok />
-      </a>
-    </Block>
+    
+ 
     <Block
       whileHover={{
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-orange-500 md:col-span-3"
+      className="col-span-6 bg-orange-500 md:col-span-3 h-[16em]"
     >
       <a
-        href="#"
+        href="https://www.instagram.com/downthegapbio/"
         className="grid h-full place-content-center text-3xl text-white"
+        target="blank"
       >
         <SiInstagram />
       </a>
@@ -157,20 +134,20 @@ const AboutBlock = () => (
 );
 
 const LocationBlock = () => (
-  <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
+  <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-6">
     <FiMapPin className="text-3xl" />
     <p className="text-center text-lg text-zinc-400">Κόρινθος</p>
   </Block>
 );
 
 const EmailListBlock = () => (
-  <Block className="col-span-12 md:col-span-9 ">
+  <Block className="col-span-12 md:col-span-full ">
     <p className="mb-3 text-lg text-center">Επικοινωνήστε μαζί μας μέσω Email</p>
     <form
       onSubmit={(e) => e.preventDefault()}
       className="flex items-center gap-2 justify-center"
     >
-      <a href="mailto: nickkaramas@gmail.com" className="bg-zinc-50 text-zinc-950 font-bold flex items-center gap-2 p-[0.5em] rounded-xl hover:text-green-200 hover:bg-zinc-900 transition-all ease-in-out duration-[0.7s]">examplemail@gmail.com <FiMail className="text-2xl"/></a>
+      <a href="mailto: downthegap@gmail.com" className="bg-zinc-50 text-zinc-950 font-bold flex items-center gap-2 p-[0.5em] rounded-xl hover:text-green-200 hover:bg-zinc-900 transition-all ease-in-out duration-[0.7s]">downthegap@gmail.com <FiMail className="text-2xl"/></a>
     
     </form>
   </Block>
