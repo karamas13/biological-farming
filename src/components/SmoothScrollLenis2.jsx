@@ -51,6 +51,9 @@ import melitzanes1 from "/photos/melitzanes1.avif";
 import melitzanes2 from "/photos/melitzanes2.avif";
 import melitzanes3 from "/photos/melitzanes3.avif";
 import melitzanes4 from "/photos/melitzanes4.avif";
+import kremmudaki from "/photos/kremmudaki.avif";
+import kremmudaki1 from "/photos/kremmydaki1.avif";
+import kremmudaki2 from "/photos/kremmydaki2.avif";
 
 
 export const SmoothScrollLenis2 = () => {
@@ -159,6 +162,7 @@ const Details = () => {
       <Product title={"Πιπεριές"} subtitle={"Λαχανικό"} src={piperia}  additionalImages={[piperies1, piperies2, piperies3, piperies4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
       <Product title={"Τομάτες"} subtitle={"Εσπεριδοειδές"} src={tomata}  additionalImages={[tomates1, tomates2, tomates3, tomates4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
       <Product title={"Μελιτζάνες"} subtitle={"Λαχανικό"} src={melitzana}  additionalImages={[melitzanes1, melitzanes2, melitzanes3, melitzanes4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Κρεμμυδάκι Φρέσκο"} subtitle={"Λαχανικό"} src={kremmudaki} additionalImages={[kremmudaki1, kremmudaki2 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
     </div>
   );
 };

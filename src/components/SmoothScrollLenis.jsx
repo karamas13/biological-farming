@@ -1,18 +1,8 @@
-import { SiSpacex } from "react-icons/si";
 import { useRef, useState, useEffect } from "react";
-import farming from "/photos/farming.jpg";
-import farming1 from "/photos/farming1.jpg";
-import farming2 from "/photos/farming2.jpg";
-import farming3 from "/photos/farming3.jpg";
-import farming4 from "/photos/farming4.jpg";
 import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import Product from "./Product";
 import broccoli from "/photos/broccoli.webp"
-import marouli from "/photos/marouli.png"
-import kounoupidi from "/photos/koynoupidi.png"
 import Footer from "../components/Footer";
-import { IoMdSnow } from "react-icons/io";
-import { FaAngleLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import ReactLenis, { Lenis } from "lenis/react";
 import HomeButton from "./HomeButton";
@@ -35,6 +25,20 @@ import lemonia1 from "/photos/lemonia1.avif";
 import lemonia2 from "/photos/lemonia2.avif";
 import lemonia3 from "/photos/lemonia3.avif";
 import lemonia4 from "/photos/lemonia4.avif";
+import laxanakia from "/photos/laxanakia.avif";
+import laxanakia1 from "/photos/laxanakia1.avif";
+import kremmudaki from "/photos/kremmudaki.avif";
+import kremmudaki1 from "/photos/kremmydaki1.avif";
+import kremmudaki2 from "/photos/kremmydaki2.avif";
+import laxano0 from "/photos/laxano0.5.avif";
+import laxano1 from "/photos/laxano1.avif";
+import laxano2 from "/photos/laxano2.avif";
+import laxano3 from "/photos/laxano3.avif";
+import kounoupidi from "/photos/kounoupidi.avif";
+import kounoupidi1 from "/photos/kounoupidi1.avif";
+import kounoupidi2 from "/photos/kounoupidi2.avif";
+import kounoupidi3 from "/photos/kounoupidi3.avif";
+import kounoupidi4 from "/photos/kounoupidi4.avif";
 
 
 
@@ -96,7 +100,7 @@ const CenterImage = () => {
         opacity,
         backgroundSize,
         clipPath,
-        backgroundImage: `url(${farming1})`,
+        backgroundImage: `url(${laxano1})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",        
       }}
@@ -108,10 +112,10 @@ const CenterImage = () => {
 const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 pt-[200px] sm:pt-[150px]">
-      <ParallaxImg src={farming} alt="Farming Example 1" start={-200} end={200} className="w-full sm:w-1/3" />
-      <ParallaxImg src={farming2} alt="Farming Example 2" start={200} end={-250} className="mx-auto w-full sm:w-2/3" />
-      <ParallaxImg src={farming3} alt="Farming Example 3" start={-200} end={200} className="w-full sm:w-1/3 ml-auto" />
-      <ParallaxImg src={farming4} alt="Farming Example 4" start={-200} end={-200} className=" w-full sm:w-5/12" />
+      <ParallaxImg src={kremmudaki1} alt="Farming Example 1" start={-200} end={200} className="w-full h-[20em] object-cover sm:w-1/3" />
+      <ParallaxImg src={lemonia4} alt="Farming Example 2" start={200} end={-250} className="mx-auto h-[35em] object-scale-down w-full sm:w-2/3" />
+      <ParallaxImg src={mprokolo4} alt="Farming Example 3" start={-200} end={200} className="w-full sm:w-1/3 ml-auto h-[20em] object-cover" />
+      <ParallaxImg src={kounoupidi4} alt="Farming Example 4" start={-200} end={-200} className=" w-full sm:w-5/12 h-[20em] object-cover" />
     </div>
   );
 };
@@ -143,6 +147,10 @@ const Details = () => {
       <Product title={"Ελλιά"} subtitle={"Δρύπη"} src={olive} additionalImages={[ellies1, ellies2 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
       <Product title={"Μπρόκολλο"} subtitle={"Λαχανικό"} src={broccoli} additionalImages={[mprokolo1, mprokolo2, mprokolo3, mprokolo4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
       <Product title={"Λεμόνι"} subtitle={"Εσπεριδοειδές"} src={lemoni} additionalImages={[lemonia1, lemonia2, lemonia3, lemonia4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Λαχανάκια Βρυξελλών"} subtitle={"Λαχανικό"} src={laxanakia} additionalImages={[laxanakia1 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Κρεμμυδάκι Φρέσκο"} subtitle={"Λαχανικό"} src={kremmudaki} additionalImages={[kremmudaki1, kremmudaki2 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Λάχανο"} subtitle={"Λαχανικό"} src={laxano0} additionalImages={[laxano1, laxano2, laxano3 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
+      <Product title={"Κουνουπίδι"} subtitle={"Λαχανικό"} src={kounoupidi} additionalImages={[kounoupidi1, kounoupidi2, kounoupidi3, kounoupidi4 ]} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nulla cupiditate debitis enim dicta esse repellendus neque perferendis veritatis mollitia ad, sapiente fuga quia laborum asperiores ea atque eum, alias explicabo nihil aliquid quam repellat eveniet."}/>
     </div>
   );
 };
