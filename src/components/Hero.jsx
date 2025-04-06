@@ -4,6 +4,7 @@ import agriculture from "/photos/agriculture.mp4";
 import NavBar from "./NavBar";
 import { FaTractor } from "react-icons/fa";
 import logo from "/photos/logo.avif";
+import logonew2 from "/photos/logonew2.avif"
 
 const Hero = () => {
   const [loading, setLoading] = useState(true);
@@ -30,7 +31,7 @@ const Hero = () => {
      {loading && 
         <div className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center z-50 bg-stone-950  bg-opacity-100 overscroll-y-contain">
           <section className="grid gap-2 text-lime-400 font-serif py-10 text-center">
-          <img src={logo} className="h-[15em] mx-auto"/>
+          <img src={logonew2} className="h-[13em] mx-auto"/>
             <FlipText>ΚΑΤΩ</FlipText>
             <FlipText>ΑΠ' ΤΟ</FlipText>
             <FlipText>ΑΥΛΑΚΙ</FlipText>
@@ -90,7 +91,7 @@ const Hero = () => {
                 transition={{ duration: 2, delay: 5.1 }}
                 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl bg-gradient-to-r from-green-800 via-lime-700 to-slate-50 bg-clip-text tracking-tight text-transparent"
               >
-                <img src={logo} className="h-[6em] opacity-80 mb-[-1.8em] mt-[-1em]"/>
+                <img src={logonew2} className="sm:h-[4em] md:h-[6em] lg:h-[4em] sm:p-20 md:p-20 p-10  mb-[-1em] mt-[-1em]"/>
               </motion.h1>
 
               {/* Secondary Hero Text */}

@@ -4,7 +4,7 @@ import { FaTimes } from "react-icons/fa";
 import { BsFillPinAngleFill } from "react-icons/bs";
 
 
-const Product = ({ src, additionalImages, description, title, subtitle }) => {
+const Product = ({ src, additionalImages, description, title }) => {
   const [showImages, setShowImages] = useState(false);
 
   return (
@@ -43,8 +43,7 @@ const Product = ({ src, additionalImages, description, title, subtitle }) => {
           transition={{ duration: 0.8 }}
           className="text-2xl sm:text-3xl md:text-4xl font-sans flex gap-2 items-center justify-center sm:justify-start pt-5 sm:pt-10"
         >
-          <section className="text-3xl">-</section>
-          {subtitle}
+        
         </motion.h2>
       </div>
 

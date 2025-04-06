@@ -1,5 +1,6 @@
 import { FaInstagram, FaFacebook, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLeaf } from "react-icons/fa";
 import logo from "/photos/logo.avif"
+import logonew2 from "/photos/logonew2.avif"
 
 const Footer = ({ color }) => {
   return (
@@ -7,8 +8,8 @@ const Footer = ({ color }) => {
       <div className="flex flex-col lg:flex lg:flex-row md:flex md:flex-col sm:flex-row justify-between items-center sm:px-60 md:px-40 py-10">
         
         {/* Logo Section */}
-        <div className="flex flex-col lg:w-[30%] sm:w-[20%] min-h-[1em] text-center sm:text-left md:text-center md:w-[50%]">
-          <img src={logo} className="h-[18em] w-auto object-cover"/>
+        <div className="flex flex-col lg:w-[30%] sm:w-[20%] min-h-[1em] text-center sm:text-left md:text-center md:w-max">
+          <img src={logonew2} className="h-[13.5em] w-[90%] mx-auto object-fit"/>
        
           <div className="flex justify-center sm:justify-between py-4 md:justify-center">
             <a href="https://www.instagram.com/downthegapbio/" target="_blank" title="Connect with us on Instagram" rel="noopener noreferrer">

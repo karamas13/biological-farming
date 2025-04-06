@@ -116,8 +116,8 @@ const MinInfo = () => {
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1">Καλλιέργειες</h3>
-                          <p className="text-sm sm:text-base">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
+                          <p className="text-sm sm:text-sm">
+                          Οι καλλιέργειές μας ακολουθούν τη ζήτηση και τις ανάγκες των πελατών μας, ανεξάρτητα από την εποχή. Καλοκαιρινά προϊόντα τον χειμώνα; Χειμερινά το κατακαλόκαιρο; Το κάνουμε πράξη! Με ευέλικτες υπαίθριες καλλιέργειες αλλά και θερμοκηπίου, δημιουργούμε το ιδανικό μικροκλίμα για κάθε φυτό. Έτσι, προσφέρουμε πάντα φρέσκα, λειτουργικά και εποχικά "αταίριαστα" προϊόντα .
                           </p>
                         </div>
                       </div>

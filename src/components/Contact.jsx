@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import HomeButton from "./HomeButton";
 import logo from "/photos/logo.avif";
+import logonew2 from "/photos/logonew2.avif"
 
  const ContactUs = () => {
   return (
@@ -66,9 +67,9 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
     <img
-      src={logo}
+      src={logonew2}
       alt="avatar"
-      className="size-[10em] rounded-full mx-auto"
+      className="size-[10em] object-cover w-auto my-5 mx-auto"
     />
     <h1 className="mb-12 text-3xl font-medium leading-tight font-mono">
       Βιολογικές Καλλιέργειες.{" "}
@@ -92,7 +93,7 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-blue-500 md:col-span-3 h-[16em]"
+      className="col-span-6 bg-blue-500 md:col-span-3 h-[18em]"
     >
       <a
         href="https://www.facebook.com/profile.php?id=61573650190967"
@@ -109,7 +110,7 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-orange-500 md:col-span-3 h-[16em]"
+      className="col-span-6 bg-orange-500 md:col-span-3 h-[18em]"
     >
       <a
         href="https://www.instagram.com/downthegapbio/"
