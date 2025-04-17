@@ -12,6 +12,24 @@ import { FiMousePointer } from "react-icons/fi";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import HomeButton from "./HomeButton";
+import fill1 from "/photos/fill1.avif"
+import fill2 from "/photos/fill2.avif"
+import fill3 from "/photos/fill3.avif"
+import fill4 from "/photos/fill4.avif"
+import fill5 from "/photos/fill5.avif"
+import fill6 from "/photos/fill6.avif"
+import fill7 from "/photos/fill7.avif"
+import fill8 from "/photos/fill8.avif"
+import fill9 from "/photos/fill9.avif"
+import fill10 from "/photos/fill10.avif"
+import fill11 from "/photos/fill11.avif"
+import fill12 from "/photos/fill12.avif"
+import goggulokramvh5 from "/photos/goggulokramvh5.avif";
+import piperiesextra1 from "/photos/piperiesextra1.avif";
+import piperiesextra2 from "/photos/piperiesextra2.avif";
+import tomatesextra1 from "/photos/tomatesextra1.avif";
+import tomatesextra2 from "/photos/tomatesextra2.avif";
+import kalampoki2 from "/photos/Kalampoki2.avif";
 
 
 
@@ -26,16 +44,16 @@ import HomeButton from "./HomeButton";
    <div> 
      
     <ReactLenis root options={{lerp:0.04}}>
-    <div className="bg-zinc-950 font-mono relative">
+    <div className="bg-zinc-950 font-mono relative ">
       <TextParallaxContent
-        imgUrl={farming1}
-        subheading="Biofarms"
+        imgUrl={fill11}
+        subheading="Κάτω Απο Το Αυλάκι"
         heading="Φυσικά προϊόντα για όλους."
       >
         <ShuffleHero />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl={farming2}
+        imgUrl={kalampoki2}
         subheading="Ποιότητα"
         heading="Απο την καλλιέργια στο τραπέζι σας."
       >
@@ -207,67 +225,67 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: fill1,
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1510925758641-869d353cecc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: fill2,
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: fill3,
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1580238053495-b9720401fd45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: fill4,
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1569074187119-c87815b476da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+    src: fill5,
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: fill6,
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: fill7,
   },
   {
     id: 8,
-    src: "https://plus.unsplash.com/premium_photo-1671436824833-91c0741e89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: fill8,
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: fill9,
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1610768764270-790fbec18178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: fill10,
   },
   {
     id: 11,
-    src: haybale,
+    src: fill11,
   },
   {
     id: 12,
-    src: farming4,
+    src: fill12,
   },
   {
     id: 13,
-    src: farming3,
+    src: goggulokramvh5,
   },
   {
     id: 14,
-    src: farming2,
+    src: piperiesextra1,
   },
   {
     id: 15,
-    src: farming1,
+    src: piperiesextra2,
   },
   {
     id: 16,
-    src: tractor,
+    src: tomatesextra1,
   },
 ];
 

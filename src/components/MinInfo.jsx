@@ -5,6 +5,18 @@ import { motion } from "framer-motion";
 import { FaAppleAlt,  FaTractor } from "react-icons/fa";
 import { IoIosNutrition } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import fill1 from "/photos/fill1.avif"
+import fill2 from "/photos/fill2.avif"
+import fill3 from "/photos/fill3.avif"
+import fill4 from "/photos/fill4.avif"
+import fill5 from "/photos/fill5.avif"
+import fill6 from "/photos/fill6.avif"
+import fill7 from "/photos/fill7.avif"
+import fill8 from "/photos/fill8.avif"
+import fill9 from "/photos/fill9.avif"
+import fill10 from "/photos/fill10.avif"
+import fill11 from "/photos/fill11.avif"
+import fill12 from "/photos/fill12.avif"
 
 
 
@@ -73,14 +85,14 @@ const MinInfo = () => {
                          initial={{opacity:0, y:100}}
                          transition={{duration:2}}   
                          className="object-cover rounded-tl-full w-full sm:w-[48%] md:w-[60%] h-auto" 
-                         src={tractors} 
-                         alt="Tractors" />
+                         src={fill2} 
+                         alt="Lettuce" />
                         <motion.img 
                          whileInView={{opacity:1, y:0}}
                          initial={{opacity:0, y:-100}}
                          transition={{duration:2}}
                          className="object-cover rounded-br-full w-full sm:w-[48%] md:w-[60%] h-auto" 
-                         src={haybale} 
+                         src={fill8} 
                          alt="Haybale" />
                     </div>
                 </div>
@@ -112,7 +124,7 @@ const MinInfo = () => {
                      animate="animate"
                      className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
                       <div className="flex flex-col justify-center items-center">
-                        <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
+                        <img src={fill11} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1">Καλλιέργειες</h3>
@@ -128,8 +140,8 @@ const MinInfo = () => {
                      animate="animate"
                      className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
                       <div className="flex flex-col justify-center items-center">
-                        <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
-                        <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
+                        <img src={fill5} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
+                        <FaAppleAlt className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1">Βιολογικές Αγορές</h3>
                           <p className="text-sm sm:text-base">
@@ -144,8 +156,8 @@ const MinInfo = () => {
                      animate="animate"
                      className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
                       <div className="flex flex-col justify-center items-center">
-                        <img src={farm} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
-                        <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
+                        <img src={fill4} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
+                        <IoIosNutrition className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1"></h3>
                           <p className="text-sm sm:text-base">

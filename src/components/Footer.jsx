@@ -12,7 +12,7 @@ const Footer = ({ color }) => {
           <img src={logonew2} className="h-[13.5em] w-[90%] mx-auto object-fit"/>
        
           <div className="flex justify-center sm:justify-between py-4 md:justify-center">
-            <a href="https://www.instagram.com/downthegapbio/" target="_blank" title="Connect with us on Instagram" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/downofthegapbio/" target="_blank" title="Connect with us on Instagram" rel="noopener noreferrer">
               <FaInstagram className="text-3xl sm:text-5xl hover:bg-orange-600 ease-in-out duration-[0.7s] rounded-xl p-1 mx-2"/>
             </a>
             <a href="https://www.facebook.com/profile.php?id=61573650190967" target="_blank" title="Connect with us on Facebook" rel="noopener noreferrer">
@@ -23,7 +23,7 @@ const Footer = ({ color }) => {
             </a>
           </div>
         </div>
-        
+            
         {/* Explore Section */}
         <div className="sm:w-[20%] lg:w-[33%] min-h-[18em] flex flex-col justify-center items-center text-center sm:text-left">
           <h2 className="text-4xl sm:text-6xl py-1 md:text-5xl">Explore

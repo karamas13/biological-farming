@@ -113,7 +113,7 @@ const SocialsBlock = () => (
       className="col-span-6 bg-orange-500 md:col-span-3 h-[18em]"
     >
       <a
-        href="https://www.instagram.com/downthegapbio/"
+        href="https://www.instagram.com/downofthegapbio/"
         className="grid h-full place-content-center text-3xl text-white"
         target="blank"
       >

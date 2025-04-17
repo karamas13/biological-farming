@@ -2,9 +2,8 @@ import { useState, useEffect } from "react";
 import { easeInOut, motion } from "framer-motion";
 import agriculture from "/photos/agriculture.mp4";
 import NavBar from "./NavBar";
-import { FaTractor } from "react-icons/fa";
-import logo from "/photos/logo.avif";
 import logonew2 from "/photos/logonew2.avif"
+import test from "/photos/test.png"
 
 const Hero = () => {
   const [loading, setLoading] = useState(true);
