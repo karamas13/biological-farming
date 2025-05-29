@@ -47,7 +47,7 @@ const FarmsSection = () => {
       <div className="flex flex-col justify-between items-center px-4 py-2 h-full">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#f1f1f1] py-8 italic">Θερινές Καλλιέργειες</h2>
         <p className="px-4 sm:px-10 py-4 text-white text-center text-lg">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, voluptatibus, animi eaque nam distinctio illum tempora, omnis repellat nobis adipisci aliquam?
+        Ο ήλιος μάς χαρίζει τα πιο νόστιμα και ζωηρά προϊόντα! Το καλοκαίρι η γη μας γεμίζει πολύχρωμους καρπούς που καλλιεργούμε με αγάπη, προσοχή και καθημερινή φροντίδα. Από το χωράφι... στο καλάθι σου, στην πιο φρέσκια τους στιγμή!
         </p>
         <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5" onClick={() => navigate("/SummerFarms")}>
           <div className="absolute inset-0 w-3 bg-orange-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>
@@ -61,7 +61,7 @@ const FarmsSection = () => {
   <motion.div 
    whileInView={{opacity:1, x:0}}
    initial={{opacity:0, x:200}}
-   transition={{duration:1}}
+   transition={{duration:0.8}}
    className="w-full sm:w-[45%] md:w-[45%] lg:w-[40%] h-full sm:h-[400px] md:h-[30em] lg:h-[450px] rounded-2xl bg-cover bg-center relative mt-20 sm:mt-0 min-h-fit" style={{ backgroundImage: `url(${farm})` }}>
     <div className="bg-blue-950 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 backdrop-saturate-100 backdrop-contrast-100 rounded-2xl h-full min-h-fit">
     <div className="flex">
@@ -76,7 +76,7 @@ const FarmsSection = () => {
       <div className="flex flex-col justify-between items-center px-4 py-2 h-full">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#f1f1f1] py-8 italic">Χειμερινές Καλλιέργειες</h2>
         <p className="px-4 sm:px-10 py-4 text-white text-center text-lg">
-          Lorem ipsum dolor sit amet consectetur Ex cupiditate amet deleniti veritatis quisquam quibusdam eius doloremque sapiente? Blanditiis esse beatae quod consequatur? 
+        Όταν ο καιρός κρυώνει, η καρδιά της γης συνεχίζει να χτυπά. Επιλέγουμε ποικιλίες που αγαπούν το κρύο και μας προσφέρουν γεύσεις γεμάτες θρεπτικά στοιχεία. Χειμωνιάτικα προϊόντα, με την ίδια στοργή που βάζουμε και στις καλοκαιρινές μας σοδειές. 
         </p>
         <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5" onClick={() => navigate("/WinterFarms")}>
           <div className="absolute inset-0 w-3 bg-blue-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>

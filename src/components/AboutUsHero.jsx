@@ -47,22 +47,22 @@ import kalampoki2 from "/photos/Kalampoki2.avif";
     <div className="bg-zinc-950 font-mono relative ">
       <TextParallaxContent
         imgUrl={fill11}
-        subheading="Κάτω Απο Το Αυλάκι"
-        heading="Φυσικά προϊόντα για όλους."
+        subheading="Γεύση που ξεκινά από το χώμα."
+        heading="Απλή, αυθεντική, δική μας."
       >
         <ShuffleHero />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl={kalampoki2}
-        subheading="Ποιότητα"
-        heading="Απο την καλλιέργια στο τραπέζι σας."
+        subheading="Καλλιέργειες με μεράκι."
+        heading="Για τραπέζια που αξίζουν το καλύτερο."
       >
        <ExampleContent />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl={farming3}
-        subheading="Συνεχώς"
-        heading="Ο Παναγιώτης κάνει τσιμπούκια"
+        subheading="Ό,τι δίνει η φύση, με τον σωστό τρόπο."
+        heading="Χωρίς υπερβολές. Με σεβασμό."
       >
         <FAQAccordion />
       </TextParallaxContent>
@@ -335,21 +335,21 @@ const FAQAccordion = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto space-y-4 text-white h-[50em]">
+    <div className="w-full max-w-md mx-auto space-y-4 text-white h-[50em] ">
       <h3 className="text-center text-4xl py-10">Συχνές Ερωτήσεις</h3>
       
 
       {/* FAQ Item 2 */}
       <div className="border-b">
         <motion.div
-          className="flex justify-between items-center p-4 cursor-pointer"
+          className="flex justify-between items-center  cursor-pointer"
           onClick={() => toggleItem(0)}
         >
-          <h2 className="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur?</h2>
+          <h2 className="text-xl font-semibold py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur?</h2>
           <motion.div
             animate={{ rotate: activeIndex === 0 ? 180 : 0 }}
-            transition={{ duration: 0.3, ease:'linear' }}
-            className="transform transition-all"
+            transition={{ duration: 0.6, ease: 'easeInOut', delay:0.5 }}
+            className=""
           >
             &#9660;
           </motion.div>
@@ -361,26 +361,28 @@ const FAQAccordion = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.5 }}
-              className="p-4"
+              transition={{ duration: 0.8, ease: 'linear' }}
+              className=""
             >
-              <p>
+              
+              <p className="py-4">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eligendi fugit excepturi vero voluptate, sint eveniet iusto repudiandae, itaque laborum accusamus adipisci natus assumenda, repellat ipsa illo recusandae veniam sit?
               </p>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
+     
       {/* FAQ Item 2 */}
       <div className="border-b">
         <motion.div
-          className="flex justify-between items-center p-4 cursor-pointer"
+          className="flex justify-between items-center  cursor-pointer"
           onClick={() => toggleItem(1)}
         >
-          <h2 className="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur?</h2>
+          <h2 className="text-xl font-semibold py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur?</h2>
           <motion.div
             animate={{ rotate: activeIndex === 1 ? 180 : 0 }}
-            transition={{ duration: 0.3, ease:'linear' }}
+            transition={{ duration: 0.6, ease: 'easeInOut', delay:0.5 }}
             className="transform transition-all"
           >
             &#9660;
@@ -393,27 +395,27 @@ const FAQAccordion = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.5 }}
-              className="p-4"
+              transition={{ duration: 0.8, ease: 'linear' }}
+              className=""
             >
-              <p>
+              <p className="py-4">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eligendi fugit excepturi vero voluptate, sint eveniet iusto repudiandae, itaque laborum accusamus adipisci natus assumenda, repellat ipsa illo recusandae veniam sit?
               </p>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-
-      {/* FAQ Item 3 */}
+      
+      {/* FAQ Item 2 */}
       <div className="border-b">
         <motion.div
-          className="flex justify-between items-center p-4 cursor-pointer"
+          className="flex justify-between items-center  cursor-pointer"
           onClick={() => toggleItem(2)}
         >
-          <h2 className="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, ipsa?</h2>
+          <h2 className="text-xl font-semibold py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur?</h2>
           <motion.div
             animate={{ rotate: activeIndex === 2 ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.6, ease: 'easeInOut', delay:0.5 }}
             className="transform transition-all"
           >
             &#9660;
@@ -426,13 +428,11 @@ const FAQAccordion = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.5 }}
-              className="p-4"
+              transition={{ duration: 0.8, ease: 'linear' }}
+              className=""
             >
-              <p>
-                Yes! Framer Motion is easy to use and integrates seamlessly with
-                React. You can animate your components with simple props and
-                transition settings.
+              <p className="py-4 ">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eligendi fugit excepturi vero voluptate, sint eveniet iusto repudiandae, itaque laborum accusamus adipisci natus assumenda, repellat ipsa illo recusandae veniam sit?
               </p>
             </motion.div>
           )}

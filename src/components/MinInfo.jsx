@@ -16,7 +16,8 @@ import fill8 from "/photos/fill8.avif"
 import fill9 from "/photos/fill9.avif"
 import fill10 from "/photos/fill10.avif"
 import fill11 from "/photos/fill11.avif"
-import fill12 from "/photos/fill12.avif"
+import mininfoLeft from "/photos/mininfoLeft.avif";
+import cards2 from "/photos/cards2.avif";
 
 
 
@@ -85,7 +86,7 @@ const MinInfo = () => {
                          initial={{opacity:0, y:100}}
                          transition={{duration:2}}   
                          className="object-cover rounded-tl-full w-full sm:w-[48%] md:w-[60%] h-auto" 
-                         src={fill2} 
+                         src={mininfoLeft} 
                          alt="Lettuce" />
                         <motion.img 
                          whileInView={{opacity:1, y:0}}
@@ -119,12 +120,12 @@ const MinInfo = () => {
                    className="md:flex md:flex-col flex flex-col lg:flex lg:flex-row justify-center items-center gap-40 md:gap-12 lg:gap-24">
             
                     <motion.div 
-                     variants={iconVariants(5)}
+                     variants={iconVariants(3)}
                      initial="initial"
                      animate="animate"
                      className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
                       <div className="flex flex-col justify-center items-center">
-                        <img src={fill11} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
+                        <img src={cards2} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaTractor className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1">Καλλιέργειες</h3>
@@ -135,23 +136,23 @@ const MinInfo = () => {
                       </div>
                     </motion.div>
                     <motion.div 
-                     variants={iconVariants(3)}
+                     variants={iconVariants(4.5)}
                      initial="initial"
                      animate="animate"
                      className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
                       <div className="flex flex-col justify-center items-center">
-                        <img src={fill5} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
+                        <img src={fill11} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <FaAppleAlt className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
                           <h3 className="text-2xl font-bold py-1">Βιολογικές Αγορές</h3>
-                          <p className="text-sm sm:text-base">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
+                          <p className="text-sm sm:text-sm">
+                          Στους πάγκους μας δεν θα βρεις απλώς προϊόντα. Θα βρεις την αγάπη μας για το καλό, καθαρό φαγητό. Όλα μας τα προϊόντα προέρχονται από πιστοποιημένες βιολογικές καλλιέργειες, χωρίς χημικά και περιττές παρεμβάσεις. Απευθυνόμαστε σε ανθρώπους που αγαπούν τη γη και την τιμούν καθημερινά, όπως κι εμείς. Από τη ρίζα ως το καλάθι σου, αυτό που προσφέρουμε είναι φροντίδα.
                           </p>
                         </div>
                       </div>
                     </motion.div>
                     <motion.div 
-                     variants={iconVariants(7)}
+                     variants={iconVariants(6)}
                      initial="initial"
                      animate="animate"
                      className="relative rounded-2xl w-[90%] md:w-[60%] lg:w-[24%] z-10">
@@ -159,9 +160,9 @@ const MinInfo = () => {
                         <img src={fill4} className="object-cover rounded-t-xl h-[20em] w-full z-10" />
                         <IoIosNutrition className="inset-0 absolute z-20 text-6xl p-2 bg-lime-500 text-[#f1f1f1] rounded-tl-xl rounded-br-xl"/> 
                         <div className="w-full h-[10em] text-center bg-zinc-900 text-[#f1f1f1] rounded-b-xl flex-col items-center px-4 py-2 min-h-fit">
-                          <h3 className="text-2xl font-bold py-1"></h3>
-                          <p className="text-sm sm:text-base">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias esse sapiente vitae nostrum quis voluptates recusandae accusantium harum laborum.
+                          <h3 className="text-2xl font-bold py-1">Πλατείες με Γεύση</h3>
+                          <p className="text-sm sm:text-sm">
+                          Κάθε εβδομάδα, με χαμόγελο και φροντίδα, ερχόμαστε κοντά σου μέσα από τις λαϊκές αγορές. Εκεί όπου οι γεύσεις, τα χρώματα και οι μυρωδιές θυμίζουν κάτι από παιδική ηλικία. Τα προϊόντα μας μαζεύονται με μεράκι και με μεράκι μεταφέρονται, για να φτάσουν φρέσκα κσι λαχταριστά στα χέρια σου. Γιατί αυτό που καλλιεργούμε, πάνω απ’ όλα, είναι η σχέση μας μαζί σου.
                           </p>
                         </div>
                       </div>
