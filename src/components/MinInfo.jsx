@@ -1,20 +1,9 @@
-import farm from "/photos/farm.jpg"
-import tractors from "/photos/tractors.jpg"
-import haybale from "/photos/haybale.jpg"
 import { motion } from "framer-motion";
 import { FaAppleAlt,  FaTractor } from "react-icons/fa";
 import { IoIosNutrition } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import fill1 from "/photos/fill1.avif"
-import fill2 from "/photos/fill2.avif"
-import fill3 from "/photos/fill3.avif"
 import fill4 from "/photos/fill4.avif"
-import fill5 from "/photos/fill5.avif"
-import fill6 from "/photos/fill6.avif"
-import fill7 from "/photos/fill7.avif"
 import fill8 from "/photos/fill8.avif"
-import fill9 from "/photos/fill9.avif"
-import fill10 from "/photos/fill10.avif"
 import fill11 from "/photos/fill11.avif"
 import mininfoLeft from "/photos/mininfoLeft.avif";
 import cards2 from "/photos/cards2.avif";

@@ -17,7 +17,7 @@ import ellies1 from "/photos/Ellies1.avif";
 import ellies2 from "/photos/Ellies2.avif";
 import ellia3 from "/photos/ellia3.avif";
 import ellia4 from "/photos/ellia4.avif";
-import logo from "/photos/logo.avif";
+import logo from "/photos/logonew2.avif"
 import mprokolo1 from "/photos/mprokolo1.avif";
 import mprokolo2 from "/photos/mprokolo2.avif";
 import mprokolo3 from "/photos/mprokolo3.avif";
@@ -44,13 +44,18 @@ import kounoupidi1 from "/photos/kounoupidi1.avif";
 import kounoupidi2 from "/photos/kounoupidi2.avif";
 import kounoupidi3 from "/photos/kounoupidi3.avif";
 import kounoupidi4 from "/photos/kounoupidi4.avif";
+import marouli from "/photos/marouli.avif"
+import marouli1 from "/photos/marouli1.avif";
+import marouli2 from "/photos/marouli2.avif";
+import marouli3 from "/photos/marouli3.avif";
+import marouli4 from "/photos/marouli4.avif";
 
 
 
 
 export const SmoothScrollLenis = () => {
   
-  const nav = useNavigate();
+
   
   return (
     <div className="bg-zinc-950">
@@ -66,9 +71,12 @@ export const SmoothScrollLenis = () => {
 };
 
 const Nav = () => {
+
+  const nav = useNavigate();
+
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 text-[#f1f1f1] ">
-      <img src={logo} className="h-[8.5em] "/>
+      <img src={logo} className="h-[8.5em] " onClick={()=> {nav("/")}}/>
       <h2 className="flex lg:text-3xl md:text-2xl text-xl bg-gradient-to-r from-blue-700 via-sky-700 to-slate-50 bg-clip-text tracking-tight text-transparent"> Χειμερινές Καλλιέργειες</h2>      
     </nav>
   );
@@ -156,6 +164,7 @@ const Details = () => {
       <Product title={"Κρεμμυδάκι Φρέσκο"} src={kremmudaki} additionalImages={[kremmudakiplus, kremmudaki1, kremmudaki2 ]} description={" Το φρέσκο κρεμμυδάκι, καταναλώνεται ολόκληρο – και το λευκό βολβό και τα πράσινα φύλλα του. Σημαντικό για την υγεία μας καθώς περιέχει πλούσια θρεπτικά στοιχεία με αποτέλεσμα να έχουμε και σημαντικά οφέλη από τις βιταμίνες C,A και Κ. Όπως επίσης και αιθέρια έλαια (θειώδεις ενώσεις) όπου βοηθούν στην αποτοξίνωση, στη χώνεψη και έχουν αντιβακτηριακές ιδιότητες. Επίσης υποστηρίζει το ανοσοποιητικό σύστημα, έχει ήπια αποτοξινωτική και αντιφλεγμονώδη δράση και βοηθά στη χώνεψη και την καλή λειτουργία του ήπατος."}/>
       <Product title={"Λάχανο"} src={laxano0} additionalImages={[laxano1, laxano2, laxano3 ]} description={" Το λάχανο υπάρχει σε διάφορες ποικιλίες, εμείς ας δούμε τα δικά μας λάχανα, Λευκό λάχανο (το πιο κοινό) , Μωβ (κόκκινο) λάχανο – πλούσιο σε αντιοξειδωτικά και πολλά άλλα θρεπτικά στοιχεία. Βιταμίνη C, Βιταμίνη Κ, Βιταμίνη A (β-καροτένιο) , Ασβέστιο, Κάλιο, Μαγνήσιο για γερά οστά, καρδιά και μυϊκή ισορροπία. Επίσης ενισχύει το ανοσοποιητικό και βοηθά στην αποτοξίνωση. Υποστηρίζει την καλή πέψη και μειώνει τη φλεγμονή στο έντερο. Ιδανικό για πλούσια διατροφή."}/>
       <Product title={"Κουνουπίδι"} src={kounoupidi} additionalImages={[kounoupidi1, kounoupidi2, kounoupidi3, kounoupidi4 ]} description={"Εξαιρετικό χειμωνιάτικο λαχανικό με πλούσια θρεπτική αξία και πολλές ευεργετικές ιδιότητες για την υγεία! Πλούσιο σε Βιταμίνη C, Βιταμίνη Κ, Βιταμίνες του συμπλέγματος Β οι οποίες συμμετέχουν στον μεταβολισμό της ενέργειας και την υγεία του νευρικού συστήματος, Χολίνη σημαντική για την εγκεφαλική λειτουργία και το συκώτι. Ιδανικό για φιατροφή."}/>
+      <Product title={"Μαρούλι"} src={marouli} additionalImages={[ marouli1, marouli2, marouli3, marouli4 ]} description={"Το μαρούλι είναι φυλλώδες λαχανικό, που ανήκει στην οικογένεια Asteraceae. Υπάρχουν διάφορεςποικιλίες όπως αυτά που παράγουμε εμείς σγουρό (πιο απαλό), ρομάνα (με πιο τραγανά φύλλα ),λόλα (κόκκινη ή πράσινη). Πλούσιο σε βιταμίνες, θρεπτικά συστατικά και οφέλη για την υγεία. Μερικά από αυτά είναι Βιταμίνη Κ, Βιταμίνη A (από β-καροτένιο), Φυλλικό οξύ (Β9), Βιταμίνη C ,Κάλιο όπου ρυθμίζει την πίεση και βοηθά στη λειτουργία των μυώνκαι Φυτικές ίνες που βοηθούν στη χώνεψη και προσφέρουν κορεσμό. Είναι χαμηλό σε θερμίδες, ιδανικό για διατροφή."}/>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motio
 import Product from "./Product";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-import logo from "/photos/logo.avif";
+import logo from "/photos/logonew2.avif"
 import ReactLenis, { Lenis } from "lenis/react";
 import HomeButton from "./HomeButton"; 
 import kolokythi1 from "/photos/Kolokythi1.avif";
@@ -52,11 +52,16 @@ import kremmudaki from "/photos/kremmudaki.avif";
 import kremmudaki1 from "/photos/kremmydaki1.avif";
 import kremmudaki2 from "/photos/kremmydaki2.avif";
 import kremmudakiplus from "/photos/kremmudakiplus.avif";
+import marouli from "/photos/marouli.avif"
+import marouli1 from "/photos/marouli1.avif";
+import marouli2 from "/photos/marouli2.avif";
+import marouli3 from "/photos/marouli3.avif";
+import marouli4 from "/photos/marouli4.avif";
 
 
 export const SmoothScrollLenis2 = () => {
   
-  const nav = useNavigate();
+
   
   return (
     <div className="bg-zinc-950">
@@ -72,9 +77,12 @@ export const SmoothScrollLenis2 = () => {
 };
 
 const Nav = () => {
+  
+  const nav = useNavigate();
+
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 text-[#f1f1f1] ">
-      <img src={logo} className="h-[8.5em]"/>
+      <img src={logo} className="h-[8.5em] cursor-pointer" onClick={()=> {nav("/")}}/>
       <h2 className="flex lg:text-3xl md:text-2xl text-xl bg-gradient-to-r from-orange-700 via-yellow-700 to-yellow-50 bg-clip-text tracking-tight text-transparent"> Θερινές Καλλιέργειες</h2>      
     </nav>
   );
@@ -161,10 +169,11 @@ const Details = () => {
       <Product title={"Τομάτες"} src={tomata}  additionalImages={[tomates1, tomates2, tomates3, tomates4 ]} description={" Ανήκει στην κατηγορία των λαχανικών, αν και συχνά θεωρείται φρούτο λόγω της γλυκιάς της γεύσης. Περιέχει Βιταμίνη C, η οποία ενισχύει το ανοσοποιητικό και βοηθά στην απορρόφηση του σιδήρου, Βιταμίνη K επίσης σημαντική για την πήξη του αίματος και την υγεία των οστών, Βιταμίνη A, Βιταμίνη B9 (φολικό οξύ), Κάλιο και άλλες ευεργετικές ουσίες όπως φυτικές ίνες και αντιοξειδωτικά."}/>
       <Product title={"Μελιτζάνες"} src={melitzana}  additionalImages={[melitzanes1, melitzanes2, melitzanes3, melitzanes4 ]} description={" Η μελιτζάνα είναι λαχανικό της οικογένειας Solanaceae (όπως και η ντομάτα και η πατάτα). Έχει πλούσια υφή και ελαφρώς γλυκιά γεύση. Πλούσια σε Φυτικές ίνες όπου βοηθούν στη χώνεψη, ρυθμίζουν το σάκχαρο και δίνουν κορεσμό. Περιέχει επίσης Κάλιο, Μαγνήσιο & Βιταμίνη Κ. Επίσης πολλά σημαντικά οφέλη για την υγεία όπως μείωση της χοληστερίνης , υποστήριξη της πέψης και τη ρύθμιση του σακχάρου και επίσης μπορεί να βοηθήσει σε απώλεια βάρους, καθώς είναι χαμηλή σε θερμίδες."}/>
       <Product title={"Κρεμμυδάκι Φρέσκο"} src={kremmudaki} additionalImages={[ kremmudakiplus,kremmudaki1, kremmudaki2 ]} description={" Το φρέσκο κρεμμυδάκι, καταναλώνεται ολόκληρο – και το λευκό βολβό και τα πράσινα φύλλα του. Σημαντικό για την υγεία μας καθώς περιέχει πλούσια θρεπτικά στοιχεία με αποτέλεσμα να έχουμε και σημαντικά οφέλη από τις βιταμίνες C,A και Κ. Όπως επίσης και αιθέρια έλαια (θειώδεις ενώσεις) όπου βοηθούν στην αποτοξίνωση, στη χώνεψη και έχουν αντιβακτηριακές ιδιότητες. Επίσης υποστηρίζει το ανοσοποιητικό σύστημα, έχει ήπια αποτοξινωτική και αντιφλεγμονώδη δράση και βοηθά στη χώνεψη και την καλή λειτουργία του ήπατος."}/>
+      <Product title={"Μαρούλι"} src={marouli} additionalImages={[ marouli1, marouli2, marouli3, marouli4 ]} description={"Το μαρούλι είναι φυλλώδες λαχανικό, που ανήκει στην οικογένεια Asteraceae. Υπάρχουν διάφορεςποικιλίες όπως αυτά που παράγουμε εμείς σγουρό (πιο απαλό), ρομάνα (με πιο τραγανά φύλλα ),λόλα (κόκκινη ή πράσινη). Πλούσιο σε βιταμίνες, θρεπτικά συστατικά και οφέλη για την υγεία. Μερικά από αυτά είναι Βιταμίνη Κ, Βιταμίνη A (από β-καροτένιο), Φυλλικό οξύ (Β9), Βιταμίνη C ,Κάλιο όπου ρυθμίζει την πίεση και βοηθά στη λειτουργία των μυώνκαι Φυτικές ίνες που βοηθούν στη χώνεψη και προσφέρουν κορεσμό. Είναι χαμηλό σε θερμίδες, ιδανικό για διατροφή."}/>
     </div>
   );
 };
-
+ 
 
 
 

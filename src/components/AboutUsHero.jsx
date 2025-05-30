@@ -164,18 +164,20 @@ const ExampleContent = () => {
   return(
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-slate-300 text-center">
-      Οι Καλλιέργειές μας
+    Μια οικογένεια, μια γη, ένας σκοπός.
     </h2>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-4 text-xl text-neutral-500 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
+       Είμαστε μια μικρή οικογενειακή επιχείρηση που καλλιεργεί με σεβασμό και υπευθυνότητα τη γη του τόπου μας, λίγο «κάτω από το αυλάκι», στη νότια Ελλάδα. Εδώ, ανάμεσα σε παλιούς ελαιώνες, αμπέλια και εύφορα λαχανόκηπους, μεγαλώνουμε τις δικές μας εποχιακές καλλιέργειες, όπως ντομάτες, κολοκύθια, μαρούλια, όπως και πολλά άλλα.
+ 
+       Η φιλοσοφία μας είναι απλή: καθαρή τροφή, καθαρές σχέσεις. Δεν χρησιμοποιούμε χημικά φυτοφάρμακα ή συντηρητικά, φροντίζουμε για την υγεία του εδάφους, και μαζεύουμε τους καρπούς μας τη σωστή στιγμή, όταν είναι πραγματικά έτοιμοι να σας θρέψουν.
+
       </p>
       <p className="mb-8 text-xl text-neutral-500 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
+      Τα προϊόντα μας τα διαθέτουμε κατευθείαν στον καταναλωτή, χωρίς μεσάζοντες, μέσω τοπικών αγορών εντός της Κορινθίας καθώς και εκτός.
+      </p>
+      <p className="mb-8 text-xl text-neutral-500 md:text-2xl">
+      Πιστεύουμε πως η διατροφή είναι πράξη αγάπης. Κι αυτό προσπαθούμε να δείξουμε σε κάθε καλάθι που φεύγει από το χωράφι μας.
       </p>
       <button onClick={()=>{navigate('/Farms')}} className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
         Περισσότερα <FiArrowUpRight className="inline" />
@@ -191,13 +193,17 @@ const ShuffleHero = () => {
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
         <span className="block mb-4 text-xs md:text-sm text-yellow-600 font-medium">
-          Κορυφαία ποιότητα
+         Από τη γη μας, για ανθρώπους σαν κι εμάς.
         </span>
         <h3 className="text-4xl md:text-6xl font-semibold text-slate-300">
-          Κάνουμε την Διαφορά
+         Με μεράκι, πίστη στην παράδοση και αληθινή αγάπη για το καλό φαγητό.
         </h3>
         <p className="text-base md:text-lg text-slate-500 my-4 md:my-6">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque sed delectus non vero aspernatur ipsam quibusdam laborum obcaecati voluptas, officia sit corporis at iure facere laudantium beatae veniam cum incidunt molestias eligendi rem nulla! Consequatur magnam at voluptatum velit dolorem eos, culpa maiores dolor fugiat, enim, libero odit tenetur vel.
+         Στο «Κάτω Από Το Αυλάκι» δεν φροντίζουμε απλώς καλλιέργειες, φροντίζουμε ιδέες, αξίες και σχέσεις. Ξεκινήσαμε σαν μια μικρή οικογενειακή προσπάθεια, με σεβασμό στη γη και στους ανθρώπους που την τιμούν με τον ιδρώτα τους.
+
+         Κάθε μας προϊόν είναι καρπός αγνής φροντίδας, φυσικής καλλιέργειας και αυθεντικής ελληνικής γεύσης. Δεν κυνηγάμε την ποσότητα· κυνηγάμε την ποιότητα.
+
+         Θέλουμε να ξέρεις τι τρως, από πού έρχεται, και να νιώθεις σιγουριά όταν το βάζεις στο πιάτο σου. Γιατί για εμάς, το φαγητό είναι τρόπος ζωής, κι αυτή τη ζωή, τη ζούμε τίμια.
         </p>      
       </div>
       <ShuffleGrid />
@@ -345,7 +351,7 @@ const FAQAccordion = () => {
           className="flex justify-between items-center  cursor-pointer"
           onClick={() => toggleItem(0)}
         >
-          <h2 className="text-xl font-semibold py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur?</h2>
+          <h2 className="text-xl font-semibold py-2">Πού μπορώ να βρω τα προϊόντα σας;</h2>
           <motion.div
             animate={{ rotate: activeIndex === 0 ? 180 : 0 }}
             transition={{ duration: 0.6, ease: 'easeInOut', delay:0.5 }}
@@ -366,7 +372,7 @@ const FAQAccordion = () => {
             >
               
               <p className="py-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eligendi fugit excepturi vero voluptate, sint eveniet iusto repudiandae, itaque laborum accusamus adipisci natus assumenda, repellat ipsa illo recusandae veniam sit?
+              Τα προϊόντα μας διατίθενται αποκλειστικά μέσω Λαϊκών Αγορών εντός και εκτός Κορίνθου. Κάθε εβδομάδα συμμετέχουμε σε επιλεγμένες αγορές της περιοχής, όπου μπορείτε να βρείτε τα φρέσκα εποχιακά μας προϊόντα και να μας γνωρίσετε από κοντά. Εάν θέλετε να ενημερωθείτε για το πρόγραμμα και τις ημέρες που βρισκόμαστε σε κάθε αγορά, μη διστάσετε να επικοινωνήσετε μαζί μας.
               </p>
             </motion.div>
           )}
@@ -379,7 +385,7 @@ const FAQAccordion = () => {
           className="flex justify-between items-center  cursor-pointer"
           onClick={() => toggleItem(1)}
         >
-          <h2 className="text-xl font-semibold py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur?</h2>
+          <h2 className="text-xl font-semibold py-2">Χρησιμοποιείτε φυτοφάρμακα ή άλλα χημικά στις καλλιέργειές σας;</h2>
           <motion.div
             animate={{ rotate: activeIndex === 1 ? 180 : 0 }}
             transition={{ duration: 0.6, ease: 'easeInOut', delay:0.5 }}
@@ -399,7 +405,7 @@ const FAQAccordion = () => {
               className=""
             >
               <p className="py-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eligendi fugit excepturi vero voluptate, sint eveniet iusto repudiandae, itaque laborum accusamus adipisci natus assumenda, repellat ipsa illo recusandae veniam sit?
+              Όχι. Φροντίζουμε τις καλλιέργειές μας με φυσικές μεθόδους και ήπιες παρεμβάσεις, αποφεύγοντας συνθετικά φυτοφάρμακα και λιπάσματα. Στόχος μας είναι να προσφέρουμε προϊόντα καθαρά και ασφαλή, ακριβώς όπως θα τα δίναμε στα δικά μας παιδιά.
               </p>
             </motion.div>
           )}
@@ -412,7 +418,7 @@ const FAQAccordion = () => {
           className="flex justify-between items-center  cursor-pointer"
           onClick={() => toggleItem(2)}
         >
-          <h2 className="text-xl font-semibold py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur?</h2>
+          <h2 className="text-xl font-semibold py-2">Ποια εποχιακά προϊόντα προσφέρετε και πότε;</h2>
           <motion.div
             animate={{ rotate: activeIndex === 2 ? 180 : 0 }}
             transition={{ duration: 0.6, ease: 'easeInOut', delay:0.5 }}
@@ -432,7 +438,7 @@ const FAQAccordion = () => {
               className=""
             >
               <p className="py-4 ">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eligendi fugit excepturi vero voluptate, sint eveniet iusto repudiandae, itaque laborum accusamus adipisci natus assumenda, repellat ipsa illo recusandae veniam sit?
+              Οι καλλιέργειές μας ακολουθούν τον κύκλο της φύσης. Τους καλοκαιρινούς μήνες διαθέτουμε προϊόντα όπως τομάτες, πιπεριές, κολοκύθια, μελιτζάνες και καλαμπόκι, ενώ τον χειμώνα καλλιεργούμε μαρούλια, ελλιές, μπρόκολα, λάχανα, λεμόνια, κουνουπίδι και λαχανάκια Βρυξελλών. Επίσης η γογγυλοκράμβη, το κρεμμυδάκι φρέσκο καθώς και τα μαρούλια καλλιεργούνται καθόλη την διάρκεια του χρόνου. Μπορείτε πάντα να δείτε την τρέχουσα διαθεσιμότητα επικοινωνώντας μαζί μας.
               </p>
             </motion.div>
           )}

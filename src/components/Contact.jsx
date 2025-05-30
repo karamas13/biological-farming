@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiGithub, SiTiktok, SiInstagram, SiYoutube, SiFacebook } from "react-icons/si";
+import { SiInstagram, SiFacebook } from "react-icons/si";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import HomeButton from "./HomeButton";
-import logo from "/photos/logo.avif";
 import logonew2 from "/photos/logonew2.avif"
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt  } from "react-icons/fa";
 
  const ContactUs = () => {
   return (
@@ -124,13 +124,21 @@ const SocialsBlock = () => (
 );
 
 const AboutBlock = () => (
-  <Block className="col-span-12 text-3xl leading-snug">
-    <p>
-      Φροντίζουμε για την ευημερία σας.{" "}
-      <span className="text-zinc-400">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, dolores iste nihil mollitia iusto explicabo debitis. Dolor recusandae aliquam rem voluptatibus soluta voluptates dolorum pariatur, itaque repellat eos laborum! Quam.
-      </span>
-    </p>
+  <Block className="col-span-12 text-3xl leading-snug ">
+    <div className="sm:w-[20%] lg:w-[33%] min-h-[8em] flex flex-col items-center justify-center text-center sm:text-left mx-auto">
+              <h2 className="text-4xl sm:text-6xl py-1 md:text-5xl">Επικοινωνία
+                <span className="flex items-center justify-center sm:justify-center mt-2 sm:mt-4 ">
+                  <section className="w-1 h-1 border-[3px] border-green-900 rounded-full mr-2"></section>
+                  <section className="w-[5em] border-b-[3px] border-green-900 rounded-2xl my-4"></section>
+                  <section className="w-1 h-1 border-[3px] border-green-900 rounded-full ml-2"></section>                  
+                </span>
+              </h2>
+              <div className="text-lg sm:text-xl flex flex-col items-center sm:items-center  ">
+                <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row"><FaPhoneAlt className="text-yellow-500"/> +30 6943200685</section>
+                <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row" ><FaEnvelope className="text-yellow-500"/> downthegap@gmail.com</section>
+                <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row"><FaMapMarkerAlt className="text-yellow-500"/> Based in Korinth, Greece</section>
+              </div>
+            </div>
   </Block>
 );
 
