@@ -25,12 +25,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="overflow-x-hidden font-serif h-screen relative scroll-smooth">
+    <section className="overflow-x-hidden font-serif h-screen relative scroll-smooth" aria-label="Βιολογικές Καλλιέργιες | Κάτω απ' το αυλάκι">
       {/* Page Loading Animation */}
      {loading && 
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center z-50 bg-stone-950  bg-opacity-100 overscroll-y-contain">
+        <div
+        className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center z-50 bg-stone-950 bg-opacity-100"
+        role="status"
+        aria-busy="true"
+        aria-label="Φόρτωση σελίδας"
+      >
           <section className="grid gap-2 text-lime-400 font-serif py-10 text-center">
-          <img src={logonew2} className="h-[13em] mx-auto"/>
+          <img src={logonew2} className="h-[13em] mx-auto" alt="Λογότυπο Κάτω απ' το αυλάκι"/>
             <FlipText>ΚΑΤΩ</FlipText>
             <FlipText>ΑΠ' ΤΟ</FlipText>
             <FlipText>ΑΥΛΑΚΙ</FlipText>
@@ -58,7 +63,7 @@ const Hero = () => {
             loop
             preload="auto"
             onCanPlayThrough={handleVideoLoad} // Trigger when video can start playing
-
+            aria-label="Φόντο με σκηνές αγροτικής ζωής"
           >
             <source src={agriculture} type="video/mp4" />
           </video>
@@ -113,7 +118,7 @@ const Hero = () => {
           </div>
         </>
       
-    </div>
+    </section>
   );
 };
 

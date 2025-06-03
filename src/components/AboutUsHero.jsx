@@ -6,9 +6,6 @@ import tractor from "/photos/tractors.jpg"
 import farming1 from "/photos/farming1.jpg"
 import farming2 from "/photos/farming2.jpg"
 import farming3 from "/photos/farming3.jpg"
-import farming4 from "/photos/farming4.jpg"
-import haybale from "/photos/haybale.jpg"
-import { FiMousePointer } from "react-icons/fi";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import HomeButton from "./HomeButton";
@@ -28,7 +25,6 @@ import goggulokramvh5 from "/photos/goggulokramvh5.avif";
 import piperiesextra1 from "/photos/piperiesextra1.avif";
 import piperiesextra2 from "/photos/piperiesextra2.avif";
 import tomatesextra1 from "/photos/tomatesextra1.avif";
-import tomatesextra2 from "/photos/tomatesextra2.avif";
 import kalampoki2 from "/photos/Kalampoki2.avif";
 
 
@@ -41,121 +37,97 @@ import kalampoki2 from "/photos/Kalampoki2.avif";
   const nav = useNavigate();
 
   return (
-   <div> 
-     
-    <ReactLenis root options={{lerp:0.04}}>
-    <div className="bg-zinc-950 font-mono relative ">
-      <TextParallaxContent
-        imgUrl={fill11}
-        subheading="Γεύση που ξεκινά από το χώμα."
-        heading="Απλή, αυθεντική, δική μας."
-      >
-        <ShuffleHero />
-      </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl={kalampoki2}
-        subheading="Καλλιέργειες με μεράκι."
-        heading="Για τραπέζια που αξίζουν το καλύτερο."
-      >
-       <ExampleContent />
-      </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl={farming3}
-        subheading="Ό,τι δίνει η φύση, με τον σωστό τρόπο."
-        heading="Χωρίς υπερβολές. Με σεβασμό."
-      >
-        <FAQAccordion />
-      </TextParallaxContent>
-    </div>
-    <Footer />
-    <HomeButton />
+    <ReactLenis root options={{ lerp: 0.04 }}>
+      <main className="bg-zinc-950 font-mono">
+        <AboutUsSection
+          imgUrl={fill11}
+          subheading="Γεύση που ξεκινά από το χώμα."
+          heading="Απλή, αυθεντική, δική μας."
+        >
+          <ShuffleHero />
+        </AboutUsSection>
+
+        <AboutUsSection
+          imgUrl={kalampoki2}
+          subheading="Καλλιέργειες με μεράκι."
+          heading="Για τραπέζια που αξίζουν το καλύτερο."
+        >
+          <ExampleContent />
+        </AboutUsSection>
+
+        <AboutUsSection
+          imgUrl={farming3}
+          subheading="Ό,τι δίνει η φύση, με τον σωστό τρόπο."
+          heading="Χωρίς υπερβολές. Με σεβασμό."
+        >
+          <FAQAccordion />
+        </AboutUsSection>
+
+        <Footer />
+        <HomeButton />
+      </main>
     </ReactLenis>
-    </div>
   );
 };
+
+const AboutUsSection = ({ imgUrl, subheading, heading, children }) => (
+  <section aria-label={heading} className="relative ">
+    <div className="relative h-[150vh] p-2">
+      <StickyImage imgUrl={imgUrl} />
+      <OverlayCopy heading={heading} subheading={subheading} />
+    </div>
+    <article>{children}</article>
+  </section>
+);
 
 const IMG_PADDING = 12;
 
-const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
-  return (
-    <div
-      style={{
-        paddingLeft: IMG_PADDING,
-        paddingRight: IMG_PADDING,
-      }}
-    >
-      <div className="relative h-[150vh]">
-        <StickyImage imgUrl={imgUrl} />
-        <OverlayCopy heading={heading} subheading={subheading} />
-      </div>
-      {children}
-    </div>
-  );
-};
+
 
 const StickyImage = ({ imgUrl }) => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["end end", "end start"],
-  });
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["end end", "end start"] });
 
- 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <motion.div
+      role="img"
+      aria-label="Καλλιέργεια αγροκτήματος"
+      alt="Εικόνα"
+      ref={ref}
+      className="sticky top-5 z-0 h-[calc(100vh-24px)] rounded-3xl overflow-hidden"
       style={{
         backgroundImage: `url(${imgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: `calc(100vh - ${IMG_PADDING * 2}px)`,
-        top: IMG_PADDING,
         scale,
-       
       }}
-      ref={targetRef}
-      className="sticky z-0 overflow-hidden rounded-3xl"
     >
-      <motion.div
-        className="absolute inset-0 bg-neutral-950/70"
-        style={{
-          opacity,
-        }}
-      />
+      <motion.div className="absolute inset-0 bg-neutral-950/70" style={{ opacity }} />
     </motion.div>
   );
 };
 
 const OverlayCopy = ({ subheading, heading }) => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
 
   const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
   const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
- 
 
   return (
-    <motion.div
-      style={{
-        y,
-        opacity,
-      }}
-      ref={targetRef}
-      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
+    <motion.header
+      ref={ref}
+      style={{ y, opacity }}
+      className="absolute top-0 left-0 flex h-screen w-full flex-col items-center justify-center text-white text-center px-4"
     >
-      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
-        {subheading}
-      </p>
-      <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
-    </motion.div>
+      <h2 className="text-xl md:text-3xl mb-2">{subheading}</h2>
+      <h1 className="text-4xl md:text-7xl font-bold">{heading}</h1>
+    </motion.header>
   );
 };
-
 
 
 const ExampleContent = () => {

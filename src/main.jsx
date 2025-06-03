@@ -1,44 +1,50 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
+// main.jsx or wherever you define your routes
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import './index.css';
+
 import HomePage from './pages/HomePage';
-import WinterFarms from './pages/WinterFarms'
-import SummerFarms from './pages/SummerFarms'
+import WinterFarms from './pages/WinterFarms';
+import SummerFarms from './pages/SummerFarms';
 import AboutUs from './pages/AboutUs';
 import Farms from './pages/Farms';
 import Contact from './pages/Contact';
 
+import ScrollWrapper from './components/ScrollWrapper';
+
+const withScroll = (element) => <ScrollWrapper>{element}</ScrollWrapper>;
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<HomePage />
+    path: '/',
+    element: withScroll(<HomePage />),
   },
   {
-    path:"/WinterFarms",
-    element:<WinterFarms className="scrollbar-thin h-32 min-h-full scr"/>
+    path: '/WinterFarms',
+    element: withScroll(<WinterFarms />),
   },
   {
-    path:"/SummerFarms",
-    element:<SummerFarms className="scrollbar-thin h-32 min-h-full scr"/>
+    path: '/SummerFarms',
+    element: withScroll(<SummerFarms />),
   },
   {
-    path:"/AboutUs",
-    element:<AboutUs className="scrollbar-thin h-32 min-h-full scr"/>
+    path: '/AboutUs',
+    element: withScroll(<AboutUs />),
   },
   {
-    path:"/Farms",
-    element:<Farms className="scrollbar-thin h-32 min-h-full scr"/>
+    path: '/Farms',
+    element: withScroll(<Farms />),
   },
   {
-    path:"/Contact",
-    element:<Contact className="scrollbar-thin h-32 min-h-full scr"/>
+    path: '/Contact',
+    element: withScroll(<Contact />),
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode >
+  <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-)
+  </StrictMode>
+);
