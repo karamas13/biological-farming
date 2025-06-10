@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import MinInfo from "../components/MinInfo";
 import Hero from "../components/Hero";
 import FarmsSection from "../components/FarmsSection";
@@ -22,7 +22,7 @@ const HomePage = () => {
         <link rel="canonical" href="https://yourdomain.gr/" />
         
         {/* Open Graph Tags */}
-        <meta property="og:title" content="Η Φάρμα Μας | Βιολογικά Ελληνικά Προϊόντα" />
+        <meta property="og:title" content="Οι Καλλιέργειές Μας | Βιολογικά Ελληνικά Προϊόντα" />
         <meta
           property="og:description"
           content="Ανακαλύψτε τις φάρμες μας και τη φιλοσοφία πίσω από την παραγωγή βιολογικών προϊόντων υψηλής ποιότητας στην Ελλάδα."
@@ -35,6 +35,27 @@ const HomePage = () => {
         {/* Language and charset */}
         <meta charSet="utf-8" />
         <html lang="el" />
+
+        <script type="application/ld+json">
+         {JSON.stringify({
+           "@context": "https://schema.org",
+           "@type": "WebSite",
+           "name": "Κάτω Απ’ το Αυλάκι",
+           "url": "https://yourdomain.gr/",
+           "description": "Ανακαλύψτε τις βιολογικές καλλιέργειες της Κορινθίας. Το 'Κάτω Απ’ το Αυλάκι' ενώνει ανθρώπους, φύση και καλλιέργειες.",
+           "publisher": {
+             "@type": "Organization",
+             "name": "Κάτω Απ’ το Αυλάκι",
+             "logo": {
+               "@type": "ImageObject",
+               "url": "https://yourdomain.gr/assets/logo.png"
+             }
+           },
+           "inLanguage": "el"
+         })}
+        </script>
+
+
       </Helmet>
 
       <main>

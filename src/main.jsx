@@ -14,7 +14,9 @@ import Contact from './pages/Contact';
 
 import ScrollWrapper from './components/ScrollWrapper';
 
-const withScroll = (element) => <ScrollWrapper>{element}</ScrollWrapper>;
+import { HelmetProvider } from 'react-helmet-async';
+
+const withScroll = (element) => <HelmetProvider><ScrollWrapper>{element}</ScrollWrapper></HelmetProvider>;
 
 const router = createBrowserRouter([
   {
