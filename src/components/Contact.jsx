@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import { SiInstagram, SiFacebook } from "react-icons/si";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import HomeButton from "./HomeButton";
 import logonew2 from "/photos/logonew2.avif"
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt  } from "react-icons/fa";
+import { FiMail, FiSend, FiLoader, FiUser, FiMessageSquare, FiCheckCircle } from 'react-icons/fi';
+import emailjs from '@emailjs/browser';
 
  const ContactUs = () => {
   return (
@@ -22,10 +23,9 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt  } from "react-icons/fa";
         className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4 py-20 my-20"
       >
         <HeaderBlock />
-        <SocialsBlock />
+        <SocialsBlock className=""/>
         <AboutBlock />
-        <LocationBlock />
-        <EmailListBlock />
+        <SendEmail />
         <HomeButton /> 
       </motion.div>
        
@@ -79,9 +79,9 @@ const HeaderBlock = () => (
     </h1>
     <a
       href="#"
-      className="flex items-center gap-1 text-green-300 hover:scale-105 transition ease-in-out duration-[0.7s] font-mono"
+      className="flex items-center gap-1 text-green-300 hover:scale-105 transition ease-in-out duration-[0.7s] font-mono cursor-default"
     >
-      Επικοινωνήστε μαζί μας <FiArrowRight />
+      Επικοινωνήστε μαζί μας 
     </a>
   </Block>
 );
@@ -93,31 +93,21 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-blue-500 md:col-span-3 h-[18em]"
-    >
-      <a
-        href="https://www.facebook.com/profile.php?id=61573650190967"
-        className="grid h-full place-content-center text-3xl text-white"
-        target="blank"
-      >
-        <SiFacebook />
-      </a>
-    </Block>
-    
- 
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-orange-500 md:col-span-3 h-[18em]"
+      className="relative bg-backdrop bg-cover lg:col-span-6 md:col-span-6 row-span-2 w-full h-full col-span-12 overflow-hidden before:absolute before:inset-0 before:bg-black/70 before:content-['']"
     >
       <a
         href="https://www.instagram.com/downofthegapbio/"
-        className="grid h-full place-content-center text-3xl text-white"
-        target="blank"
+        /* Added 'relative z-10' to pull the content above the overlay */
+        className="relative z-10 grid h-full place-content-center text-3xl text-white"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <SiInstagram />
+        <div className="flex flex-col gap-4">
+          <span className="text-center bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 bg-clip-text tracking-tight text-transparent">
+            Επισκευτείτε μας στο Instagram
+          </span>
+          <SiInstagram className="scale-150 mx-auto " />
+        </div>
       </a>
     </Block>
   </>
@@ -142,48 +132,116 @@ const AboutBlock = () => (
   </Block>
 );
 
-const LocationBlock = () => (
-  <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-6">
-    <FiMapPin className="text-3xl" />
-    <p className="text-center text-lg text-zinc-400">Κόρινθος</p>
-  </Block>
-);
 
-const EmailListBlock = () => (
-  <Block className="col-span-12 md:col-span-full ">
-    <p className="mb-3 text-lg text-center">Επικοινωνήστε μαζί μας μέσω Email</p>
-    <form
-      onSubmit={(e) => e.preventDefault()}
-      className="flex items-center gap-2 justify-center"
-    >
-      <a href="mailto: downthegap@gmail.com" className="bg-zinc-50 text-zinc-950 font-bold flex items-center gap-2 p-[0.5em] rounded-xl hover:text-green-200 hover:bg-zinc-900 transition-all ease-in-out duration-[0.7s]">downthegap@gmail.com <FiMail className="text-2xl"/></a>
-    
-    </form>
-  </Block>
-);
 
-const Logo = () => {
-  // Temp logo from https://logoipsum.com/
+const SendEmail = () => {
+  const form = useRef();
+  const [status, setStatus] = useState('idle');
+  const [charCount, setCharCount] = useState(0);
+  const MAX_CHARS = 1000;
+
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    // --- CONFIGURATION ---
+    // Update these with your actual EmailJS keys
+    const SERVICE_ID = "";
+    const TEMPLATE_ID = "";
+    const PUBLIC_KEY = "";
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .then(() => {
+          setStatus('success');
+          e.target.reset();
+          setCharCount(0);
+          setTimeout(() => setStatus('idle'), 5000);
+      })
+      .catch((error) => {
+          console.error('EmailJS Error:', error);
+          setStatus('error');
+          setTimeout(() => setStatus('idle'), 5000);
+      });
+  };
+
   return (
-    <svg
-      width="40"
-      height="auto"
-      viewBox="0 0 50 39" 
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto mb-12 fill-zinc-50"
-    >
-      <path
-        d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-        stopColor="#000000"
-      ></path>
-      <path
-        d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-        stopColor="#000000"
-      ></path>
-    </svg>
+    <Block className="col-span-12">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="mb-6 text-2xl font-bold text-center text-zinc-100 flex items-center justify-center gap-2">
+          Στείλτε μας ένα μήνυμα <FiMail className="text-green-400" />
+        </h2>
+
+        <form ref={form} onSubmit={handleSendEmail} className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Name Input */}
+            <div className="relative">
+              <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+              <input
+                type="text"
+                name="from_name"
+                required
+                placeholder="Ονοματεπώνυμο"
+                className="w-full bg-zinc-900/50 border border-zinc-700 text-white p-3 pl-10 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all"
+              />
+            </div>
+
+            {/* Email Input */}
+            <div className="relative">
+              <FiMail className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+              <input
+                type="email"
+                name="user_email"
+                required
+                placeholder="Το Email σας"
+                className="w-full bg-zinc-900/50 border border-zinc-700 text-white p-3 pl-10 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all"
+              />
+            </div>
+          </div>
+
+          {/* Message Textarea */}
+          <div className="relative">
+            <FiMessageSquare className="absolute left-3 top-4 text-zinc-500" />
+            <textarea
+              name="message"
+              required
+              maxLength={MAX_CHARS}
+              onChange={(e) => setCharCount(e.target.value.length)}
+              placeholder="Πώς μπορούμε να βοηθήσουμε;"
+              rows="4"
+              className="w-full bg-zinc-900/50 border border-zinc-700 text-white p-3 pl-10 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all resize-none"
+            />
+            {/* Character Counter */}
+            <div className={`absolute bottom-3 right-3 text-xs ${charCount >= MAX_CHARS ? 'text-red-500' : 'text-zinc-500'}`}>
+              {charCount}/{MAX_CHARS}
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            disabled={status === 'sending' || status === 'success'}
+            className="w-full bg-zinc-50 text-zinc-950 font-bold flex items-center justify-center gap-2 py-4 rounded-xl hover:bg-white hover:scale-[1.01] active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {status === 'sending' ? (
+              <FiLoader className="animate-spin text-2xl" />
+            ) : status === 'success' ? (
+              <><FiCheckCircle className="text-xl text-green-600" /> Εστάλη!</>
+            ) : (
+              <>Αποστολή Μηνύματος <FiSend /></>
+            )}
+          </button>
+
+          {/* Feedback Messages */}
+          <div className="h-4 text-center">
+            {status === 'error' && (
+              <p className="text-sm text-red-400 animate-shake">Κάτι πήγε στραβά. Δοκιμάστε ξανά.</p>
+            )}
+          </div>
+        </form>
+      </div>
+    </Block>
   );
 };
+
 
 
 

@@ -1,5 +1,4 @@
 import { FaInstagram, FaFacebook, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLeaf } from "react-icons/fa";
-import logo from "/photos/logo.avif"
 import logonew2 from "/photos/logonew2.avif"
 
 const Footer = ({ color }) => {
@@ -14,10 +13,7 @@ const Footer = ({ color }) => {
           <div className="flex justify-center sm:justify-between py-4 md:justify-center">
             <a href="https://www.instagram.com/downofthegapbio/" target="_blank" title="Connect with us on Instagram" rel="noopener noreferrer">
               <FaInstagram className="text-3xl sm:text-5xl hover:bg-orange-600 ease-in-out duration-[0.7s] rounded-xl p-1 mx-2"/>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61573650190967" target="_blank" title="Connect with us on Facebook" rel="noopener noreferrer">
-              <FaFacebook className="text-3xl sm:text-5xl hover:bg-blue-600 ease-in-out duration-[0.7s] rounded-full p-1 mx-2"/>
-            </a>
+            </a>        
             <a href="mailto: downthegap@gmail.com" target="_blank" title="Connect with us via Email" rel="noopener noreferrer">
               <FaEnvelope className="text-3xl sm:text-5xl hover:bg-red-700 ease-in-out duration-[0.7s] rounded-xl p-1 mx-2"/>
             </a>
@@ -70,7 +66,7 @@ const Footer = ({ color }) => {
       </div>
 
       {/* Footer bottom */}
-      <h4 className="text-center py-5 text-sm sm:text-base px-1">© 2025 websitename.com All rights reserved | Designed and Developed by <a href="https://nickkaramaroudisdev.com/" target="_blank" className="underline">Nick Karamaroudis</a></h4>
+      <h4 className="text-center py-5 text-sm sm:text-base px-1">© 2026 downthegap.com All rights reserved | Designed and Developed by <a href="https://nickkaramaroudisdev.com/" target="_blank" className="underline">Nick Karamaroudis</a></h4>
     </div>
   );
 }

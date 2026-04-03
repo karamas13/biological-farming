@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionTemplate, AnimatePresence } from "framer-motion";
 import Product from "./Product";
 import broccoli from "/photos/broccoli.webp"
 import Footer from "../components/Footer";
@@ -49,6 +49,8 @@ import marouli1 from "/photos/marouli1.avif";
 import marouli2 from "/photos/marouli2.avif";
 import marouli3 from "/photos/marouli3.avif";
 import marouli4 from "/photos/marouli4.avif";
+import { FaLeaf, FaBars, FaTimes } from "react-icons/fa";
+
 
 
 
@@ -72,12 +74,84 @@ export const SmoothScrollLenis = () => {
 
 const Nav = () => {
 
+  const [isOpen, setIsOpen] = useState(false);
+
   const nav = useNavigate();
 
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Farms", path: "/Farms" },
+    { name: "AboutUs", path: "/AboutUs" },
+    { name: "Contact", path: "/Contact" },
+  ];
+
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 text-[#f1f1f1] ">
-      <img src={logo} className="h-[8.5em] " onClick={()=> {nav("/")}}/>
-      <h2 className="flex lg:text-3xl md:text-2xl text-xl bg-gradient-to-r from-blue-700 via-sky-700 to-slate-50 bg-clip-text tracking-tight text-transparent"> Χειμερινές Καλλιέργειες</h2>      
+    <nav className="fixed left-0 right-0 top-0 z-[100]  text-[#f1f1f1]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+        
+        {/* LOGO - Responsive Height */}
+        <img 
+          src={logo} 
+          className="h-16 sm:h-24 lg:h-[6em] cursor-pointer transition-all" 
+          onClick={() => { nav("/"); setIsOpen(false); }}
+          alt="Logo"
+        />
+
+        {/* DESKTOP LINKS - Hidden on Mobile/Tablet */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <section key={link.name} className="group py-1 flex items-center gap-2 hover:text-green-700 transition-all duration-500">
+              <FaLeaf className="text-xl group-hover:rotate-45 transition-transform" />
+              <a href={link.path} className="cursor-pointer text-xl font-medium tracking-wide">
+                {link.name}
+              </a>
+            </section>
+          ))}
+        </div>
+
+        {/* CENTER/RIGHT TITLE - Responsive sizing */}
+        <h2 className="hidden md:flex lg:text-3xl md:text-xl bg-gradient-to-r from-blue-400 via-sky-400 to-slate-50 bg-clip-text tracking-tight text-transparent font-bold">
+          Χειμερινές Καλλιέργειες
+        </h2>
+
+        {/* MOBILE HAMBURGER BUTTON */}
+        <button 
+          className="lg:hidden text-2xl p-2 focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* MOBILE MENU OVERLAY */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "100vh" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden absolute top-full left-0 right-0 bg-zinc-950 border-t border-white/10 overflow-hidden"
+          >
+            <div className="flex flex-col p-8 gap-6">
+              {/* Mobile Title (visible only here on small screens) */}
+              <h2 className="md:hidden text-2xl bg-gradient-to-r from-blue-400 to-slate-50 bg-clip-text text-transparent font-bold mb-4">
+                Χειμερινές Καλλιέργειες
+              </h2>
+              
+              {navLinks.map((link) => (
+                <div 
+                  key={link.name}
+                  onClick={() => { nav(link.path); setIsOpen(false); }}
+                  className="flex items-center gap-4 text-2xl hover:text-green-500 transition-colors cursor-pointer"
+                >
+                  <FaLeaf className="text-green-600" />
+                  <span>{link.name}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

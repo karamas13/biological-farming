@@ -11,6 +11,7 @@ export default {
         'map2': "url('/photos/map2.jpg')",  
         'map3': "url('/photos/map3.jpeg')",  
         'crops': "url('/photos/abomination.jpg')",  
+        'backdrop': "url('/photos/fill4.avif')",  
       },
      
     

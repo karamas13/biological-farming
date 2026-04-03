@@ -49,11 +49,15 @@ const MinInfo = () => {
                            whileInView={{opacity:1, x:0}}
                            initial={{opacity:0, x:-100}}
                            transition={{duration:0.9, delay:0.6}}  
-                          className="flex flex-col sm:flex-row mt-8 sm:mt-4 py-20">
-                            <div className="">                            
-                                <p className="text-base sm:text-md text-[#f1f1f1]">
-                                Μπορείτε να μάθετε περισσότερα για εμάς μέσω των social media ή να συναντηθούμε από κοντά στις βιολογικές αγορές Αττικής, όπου θα χαρούμε να σας γνωρίσουμε και να σας παρουσιάσουμε τα προϊόντα μας. Οι αγορές μας είναι, κάθε Δευτέρα στην Κηφισιά, Πέμπτη στον Κορυδαλλό πλατεία Ελευθερίου Βενιζέλου, Παρασκευή στην Αργυρούπολη πλησίον κολυμβητηρίου και Σάββατο στο Ίλιον, μπροστά από το πάρκο Τρίτση, από μεριά Λ. δημοκρατίας
-                                </p>
+                          className="flex flex-col sm:flex-row mt-8 sm:mt-4 py-20">                          
+                            <div className="flex flex-col justify-start items-start gap-2">
+                              <h4 className="text-lime-50 text-3xl mb-5"><strong className="text-yellow-500">Πού</strong> θα μας βρείτε;</h4>                            
+                                <span className="text-lg"><strong className="text-lime-500">ΔΕΥΤΕΡΑ </strong><span className="italic text-lime-50">| Βιολογική αγορά <strong className="underline"><a href="https://maps.app.goo.gl/mdLY9w3JD6sW38eZA">Κηφισιάς</a></strong></span></span>
+                                <span className="text-lg"><strong className="text-lime-500">ΤΕΤΑΡΤΗ </strong><span className="italic text-lime-50">| Βιολογική αγορά <strong className="underline">Φιλοθέης</strong></span></span>
+                                <span className="text-lg"><strong className="text-lime-500">ΠΕΜΠΤΗ </strong><span className="italic text-lime-50">| Βιολογική αγορά <strong className="underline">Κορυδαλλού</strong></span></span>
+                                <span className="text-lg"><strong className="text-lime-500">ΠΑΡΑΣΚΕΥΗ </strong><span className="italic text-lime-50">| Βιολογική αγορά <strong className="underline">Αργυρούπολης</strong></span></span>
+                                <span className="text-lg"><strong className="text-lime-500">ΣΑΒΒΑΤΟ </strong><span className="italic text-lime-50">| Βιολογική αγορά <strong className="underline">Ίλιον</strong></span></span>
+                                <p className="mt-5 text-lg text-yellow-500">Καθημερινές 6:00 με 14:00 & Σάββατο 8:00 με 14:00</p>
                             </div>
                             
                            
