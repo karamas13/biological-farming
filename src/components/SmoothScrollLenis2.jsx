@@ -1,5 +1,4 @@
-import { useRef, useState, useEffect } from "react";
-import farming1 from "/photos/farming1.jpg";
+import { useRef } from "react";
 import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import Product from "./Product";
 import Footer from "../components/Footer";
@@ -9,7 +8,6 @@ import ReactLenis, { Lenis } from "lenis/react";
 import HomeButton from "./HomeButton"; 
 import kolokythi1 from "/photos/Kolokythi1.avif";
 import kolokythi2 from "/photos/Kolokythi2.avif";
-import kolokythi3 from "/photos/Kolokythi3.avif";
 import kolokythi4 from "/photos/Kolokythi4.avif";
 import kolokythi5 from "/photos/Kolokythi5.avif";
 import kolokythi6 from "/photos/Kolokythi6.avif";
@@ -22,27 +20,17 @@ import kalampoki3 from "/photos/Kalampoki3.avif";
 import kalampoki4 from "/photos/Kalampoki4.avif";
 import kalampoki5 from "/photos/Kalampoki5.avif";
 import corn from "/photos/corn.webp";
-import laxano from "/photos/laxano.avif";
-import goggulokramvh1 from "/photos/goggulokramvh1.avif";
-import goggulokramvh2 from "/photos/goggulokramvh2.avif";
-import goggulokramvh3 from "/photos/goggulokramvh3.avif";
-import goggulokramvh4 from "/photos/goggulokramvh4.avif";
 import goggulokramvh5 from "/photos/goggulokramvh5.avif";
 import piperia from "/photos/piperia.avif"
 import piperies1 from "/photos/piperies1.avif";
 import piperies2 from "/photos/piperies2.avif";
 import piperies3 from "/photos/piperies3.avif";
 import piperies4 from "/photos/piperies4.avif";
-import piperiesextra1 from "/photos/piperiesextra1.avif";
-import piperiesextra2 from "/photos/piperiesextra2.avif";
 import tomata from "/photos/tomata.avif"
 import tomates1 from "/photos/tomates1.avif";
 import tomates2 from "/photos/tomates2.avif";
 import tomates3 from "/photos/tomates3.avif";
 import tomates4 from "/photos/tomates4.avif";
-import tomatesextra1 from "/photos/tomatesextra1.avif";
-import tomatesextra2 from "/photos/tomatesextra2.avif";
-import tomatesextra3 from "/photos/tomatesextra3.avif";
 import melitzana from "/photos/melitzana.avif"
 import melitzanes1 from "/photos/melitzanes1.avif";
 import melitzanes2 from "/photos/melitzanes2.avif";

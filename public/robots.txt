@@ -1,0 +1,15 @@
+
+User-agent: *
+Allow: /
+
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /.env
+Disallow: /config/
+
+Allow: /assets/
+Allow: /photos/
+
+Host: https://downthegap.com
+Sitemap: https://downthegap.com/sitemap.xml

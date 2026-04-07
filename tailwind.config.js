@@ -10,7 +10,7 @@ export default {
         'map': "url('/photos/map.webp')",  
         'map2': "url('/photos/map2.jpg')",  
         'map3': "url('/photos/map3.jpeg')",  
-        'crops': "url('/photos/abomination.jpg')",  
+        'crops': "url('/photos/abomination.avif')",  
         'backdrop': "url('/photos/fill4.avif')",  
       },
      

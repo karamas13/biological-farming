@@ -1,73 +1,110 @@
-import { FaInstagram, FaFacebook, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLeaf } from "react-icons/fa";
-import logonew2 from "/photos/logonew2.avif"
+import { FaInstagram, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLeaf } from "react-icons/fa";
+import logonew2 from "/photos/logonew2.avif";
 
-const Footer = ({ color }) => {
+const Footer = ({ color = "#0a0a0a" }) => {
   return (
-    <div className="min-h-fit text-[#f1f1f1]" style={{backgroundColor: color}}>
-      <div className="flex flex-col lg:flex lg:flex-row md:flex md:flex-col sm:flex-row justify-between items-center sm:px-60 md:px-40 py-10">
+    <footer 
+      className="text-[#f1f1f1] transition-colors duration-500" 
+      style={{ backgroundColor: color }}
+    >
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center px-6 py-12 lg:py-16 lg:gap-60 gap-14">
         
-        {/* Logo Section */}
-        <div className="flex flex-col lg:w-[30%] sm:w-[20%] min-h-[1em] text-center sm:text-left md:text-center md:w-max">
-          <img src={logonew2} className="h-[13.5em] w-[90%] mx-auto object-fit"/>
-       
-          <div className="flex justify-center sm:justify-between py-4 md:justify-center">
-            <a href="https://www.instagram.com/downofthegapbio/" target="_blank" title="Connect with us on Instagram" rel="noopener noreferrer">
-              <FaInstagram className="text-3xl sm:text-5xl hover:bg-orange-600 ease-in-out duration-[0.7s] rounded-xl p-1 mx-2"/>
+        {/* Logo & Socials */}
+        <div className="flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left">
+          <img 
+            src={logonew2} 
+            alt="Κάτω απ' το αυλάκι Logo" 
+            width="250"
+            height="250"
+            loading="lazy"
+            className="h-[10em] md:h-[12em] w-auto object-contain mb-4"
+          />
+          <div className="flex flex-row w-full justify-center gap-4">
+            <a 
+              href="https://www.instagram.com/downofthegapbio/" 
+              target="_blank" 
+              aria-label="Follow us on Instagram" 
+              rel="noopener noreferrer"
+              className="p-3 bg-white/5 hover:bg-orange-600 rounded-xl transition-all duration-300"
+            >
+              <FaInstagram className="text-2xl" />
             </a>        
-            <a href="mailto: downthegap@gmail.com" target="_blank" title="Connect with us via Email" rel="noopener noreferrer">
-              <FaEnvelope className="text-3xl sm:text-5xl hover:bg-red-700 ease-in-out duration-[0.7s] rounded-xl p-1 mx-2"/>
+            <a 
+              href="mailto:downthegap@gmail.com" 
+              aria-label="Send us an email"
+              className="p-3 bg-white/5 hover:bg-red-700 rounded-xl transition-all duration-300"
+            >
+              <FaEnvelope className="text-2xl" />
             </a>
           </div>
         </div>
             
         {/* Explore Section */}
-        <div className="sm:w-[20%] lg:w-[33%] min-h-[18em] flex flex-col justify-center items-center text-center sm:text-left">
-          <h2 className="text-4xl sm:text-6xl py-1 md:text-5xl">Explore
-            <span className="flex items-center justify-center sm:justify-start mt-2 sm:mt-4">
-              <section className="w-[2em] border-b-[3px] border-green-900 rounded-2xl my-4"></section>
-              <section className="w-1 h-1 border-[3px] border-green-900 rounded-full ml-2"></section>
+        <div className="flex flex-col items-center lg:items-start lg:w-1/4">
+          <h2 className="text-3xl font-bold mb-6 flex flex-col items-center lg:items-start">
+            Explore
+            <span className="flex items-center gap-2 mt-2">
+              <span className="w-8 h-[3px] bg-green-700 rounded-full" />
+              <span className="w-1 h-1 bg-green-700 rounded-full" />
             </span>
           </h2>
-          <div className="text-lg sm:text-xl flex flex-col sm:items-start ">
-            <section className="py-1 flex items-center  gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
-              <FaLeaf />
-              <a href="/Farms" className="cursor-pointer">Farms</a>               
-            </section>
-            <section className="py-1 flex items-center gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
-              <FaLeaf />
-              <a href="/AboutUs" className="cursor-pointer">AboutUs</a>               
-            </section>
-            <section className="py-1 flex items-center gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
-              <FaLeaf />
-              <a href="/Contact" className="cursor-pointer">Contact</a>               
-            </section>
-            <section className="py-1 flex items-center gap-4 hover:text-green-900 transition-all ease-in-out duration-[0.7s]">
-              <FaLeaf />
-              <a href="/" className="cursor-pointer">Home</a>               
-            </section>
-          </div>
+          <nav className="flex flex-col gap-3 text-lg">
+            {[
+              { name: "Home", path: "/" },
+              { name: "Farms", path: "/Farms" },
+              { name: "About Us", path: "/AboutUs" },
+              { name: "Contact", path: "/Contact" }
+            ].map((link) => (
+              <a 
+                key={link.name}
+                href={link.path} 
+                className="flex items-center gap-3 hover:text-green-500 transition-colors duration-300"
+              >
+                <FaLeaf className="text-sm text-green-700" />
+                {link.name}
+              </a>
+            ))}
+          </nav>
         </div>
 
         {/* Contact Section */}
-        <div className="sm:w-[20%] lg:w-[33%] min-h-[18em] flex flex-col items-center justify-center text-center sm:text-left ">
-          <h2 className="text-4xl sm:text-6xl py-1 md:text-5xl">Contact
-            <span className="flex items-center justify-center sm:justify-start mt-2 sm:mt-4">
-              <section className="w-[2em] border-b-[3px] border-green-900 rounded-2xl my-4"></section>
-              <section className="w-1 h-1 border-[3px] border-green-900 rounded-full ml-2"></section>
+        <div className="flex flex-col items-center lg:items-start lg:w-1/3">
+          <h2 className="text-3xl font-bold mb-6 flex flex-col items-center lg:items-start">
+            Contact
+            <span className="flex items-center gap-2 mt-2">
+              <span className="w-8 h-[3px] bg-green-700 rounded-full" />
+              <span className="w-1 h-1 bg-green-700 rounded-full" />
             </span>
           </h2>
-          <div className="text-lg sm:text-xl flex flex-col items-center sm:items-start ">
-            <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row"><FaPhoneAlt className="text-yellow-500"/> +30 6943200685</section>
-            <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row" ><FaEnvelope className="text-yellow-500"/> downthegap@gmail.com</section>
-            <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row"><FaMapMarkerAlt className="text-yellow-500"/> Based in Korinth, Greece</section>
+          <div className="flex flex-col gap-4 text-lg items-center lg:items-start">
+            <a href="tel:+306943200685" className="flex items-center gap-4 hover:text-yellow-500 transition-colors">
+              <FaPhoneAlt className="text-yellow-600"/> +30 6943200685
+            </a>
+            <p className="flex items-center gap-4">
+              <FaEnvelope className="text-yellow-600"/> downthegap@gmail.com
+            </p>
+            <p className="flex items-center gap-4 text-center lg:text-left">
+              <FaMapMarkerAlt className="text-yellow-600"/> Korinth, Greece
+            </p>
           </div>
         </div>
-
       </div>
 
-      {/* Footer bottom */}
-      <h4 className="text-center py-5 text-sm sm:text-base px-1">© 2026 downthegap.com All rights reserved | Designed and Developed by <a href="https://nickkaramaroudisdev.com/" target="_blank" className="underline">Nick Karamaroudis</a></h4>
-    </div>
+      {/* Footer Bottom */}
+      <div className="border-t border-white/10 py-6 text-center text-sm text-stone-400 px-4">
+        <p>
+          © 2026 downthegap.com | Designed by{" "}
+          <a 
+            href="https://nickkaramaroudisdev.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="underline hover:text-white transition-colors"
+          >
+            Nick Karamaroudis
+          </a>
+        </p>
+      </div>
+    </footer>
   );
 }
 

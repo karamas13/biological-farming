@@ -1,7 +1,6 @@
 import FarmsSection from "../components/FarmsSection";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
-import HomeButton from "../components/HomeButton";
 import { Helmet } from "react-helmet-async";
 
 const Farms = () => {
@@ -61,7 +60,6 @@ const Farms = () => {
       <NavBar />
       <FarmsSection />
       <Footer color={"#020617"} />
-      <HomeButton />
     </div>
   );
 };

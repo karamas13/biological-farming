@@ -2,13 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useMotionTemplate, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import ReactLenis from "lenis/react";
-import tractor from "/photos/tractors.jpg"
-import farming1 from "/photos/farming1.jpg"
-import farming2 from "/photos/farming2.jpg"
-import farming3 from "/photos/farming3.jpg"
+import farming3 from "/photos/farming3.avif"
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
-import HomeButton from "./HomeButton";
 import fill1 from "/photos/fill1.avif"
 import fill2 from "/photos/fill2.avif"
 import fill3 from "/photos/fill3.avif"
@@ -25,34 +21,33 @@ import goggulokramvh5 from "/photos/goggulokramvh5.avif";
 import piperiesextra1 from "/photos/piperiesextra1.avif";
 import piperiesextra2 from "/photos/piperiesextra2.avif";
 import tomatesextra1 from "/photos/tomatesextra1.avif";
-import kalampoki2 from "/photos/Kalampoki2.avif";
+import kalampoki1 from "/photos/Kalampoki1.avif";
 
 
 
 
  const AboutUsHero = () => {
   
-
-
-  const nav = useNavigate();
-
-  return (
+return (
     <ReactLenis root options={{ lerp: 0.04 }}>
       <main className="bg-zinc-950 font-mono">
+        {/* LCP Optimization: Το πρώτο section έχει προτεραιότητα */}
         <AboutUsSection
           imgUrl={fill11}
           subheading="Γεύση που ξεκινά από το χώμα."
           heading="Απλή, αυθεντική, δική μας."
+          isMainHeader={true}
+          priority={true} 
         >
           <ShuffleHero />
         </AboutUsSection>
 
         <AboutUsSection
-          imgUrl={kalampoki2}
+          imgUrl={kalampoki1}
           subheading="Καλλιέργειες με μεράκι."
           heading="Για τραπέζια που αξίζουν το καλύτερο."
         >
-          <ExampleContent />
+          <MainContent />
         </AboutUsSection>
 
         <AboutUsSection
@@ -64,27 +59,22 @@ import kalampoki2 from "/photos/Kalampoki2.avif";
         </AboutUsSection>
 
         <Footer />
-        <HomeButton />
       </main>
     </ReactLenis>
   );
 };
 
-const AboutUsSection = ({ imgUrl, subheading, heading, children }) => (
-  <section aria-label={heading} className="relative ">
+const AboutUsSection = ({ imgUrl, subheading, heading, children, isMainHeader, priority }) => (
+  <section aria-label={heading} className="relative">
     <div className="relative h-[150vh] p-2">
-      <StickyImage imgUrl={imgUrl} />
-      <OverlayCopy heading={heading} subheading={subheading} />
+      <StickyImage imgUrl={imgUrl} altText={heading} priority={priority} />
+      <OverlayCopy heading={heading} subheading={subheading} isMainHeader={isMainHeader} />
     </div>
     <article>{children}</article>
   </section>
 );
 
-const IMG_PADDING = 12;
-
-
-
-const StickyImage = ({ imgUrl }) => {
+const StickyImage = ({ imgUrl, altText, priority }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["end end", "end start"] });
 
@@ -93,24 +83,26 @@ const StickyImage = ({ imgUrl }) => {
 
   return (
     <motion.div
-      role="img"
-      aria-label="Καλλιέργεια αγροκτήματος"
-      alt="Εικόνα"
       ref={ref}
-      className="sticky top-5 z-0 h-[calc(100vh-24px)] rounded-3xl overflow-hidden"
-      style={{
-        backgroundImage: `url(${imgUrl})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        scale,
-      }}
+      className="sticky top-5 z-0 h-[calc(100vh-24px)] rounded-3xl overflow-hidden bg-zinc-900"
+      style={{ scale }}
     >
-      <motion.div className="absolute inset-0 bg-neutral-950/70" style={{ opacity }} />
+      {/* Optimization: Χρήση <img> αντί για backgroundImage για καλύτερο LCP & SEO */}
+      <img 
+        src={imgUrl} 
+        alt={altText}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        className="h-full w-full object-cover"
+        width="1920" 
+        height="1080"
+      />
+      <motion.div className="absolute inset-0 bg-black/70" style={{ opacity }} />
     </motion.div>
   );
 };
 
-const OverlayCopy = ({ subheading, heading }) => {
+const OverlayCopy = ({ subheading, heading, isMainHeader = false }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
 
@@ -123,32 +115,36 @@ const OverlayCopy = ({ subheading, heading }) => {
       style={{ y, opacity }}
       className="absolute top-0 left-0 flex h-screen w-full flex-col items-center justify-center text-white text-center px-4"
     >
-      <h2 className="text-xl md:text-3xl mb-2">{subheading}</h2>
-      <h1 className="text-4xl md:text-7xl font-bold">{heading}</h1>
+      <p className="text-xl md:text-3xl mb-2">{subheading}</p>
+      {isMainHeader ? (
+        <h1 className="text-4xl md:text-7xl font-bold">{heading}</h1>
+      ) : (
+        <h2 className="text-4xl md:text-7xl font-bold">{heading}</h2>
+      )}
     </motion.header>
   );
 };
 
 
-const ExampleContent = () => {
+const MainContent = () => {
   const navigate = useNavigate();
   
   return(
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-slate-300 text-center">
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-slate-200 text-center">
     Μια οικογένεια, μια γη, ένας σκοπός.
     </h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-500 md:text-2xl">
+      <p className="mb-4 text-xl text-neutral-300 md:text-2xl">
        Είμαστε μια μικρή οικογενειακή επιχείρηση που καλλιεργεί με σεβασμό και υπευθυνότητα τη γη του τόπου μας, λίγο «κάτω από το αυλάκι», στη νότια Ελλάδα. Εδώ, ανάμεσα σε παλιούς ελαιώνες, αμπέλια και εύφορα λαχανόκηπους, μεγαλώνουμε τις δικές μας εποχιακές καλλιέργειες, όπως ντομάτες, κολοκύθια, μαρούλια, όπως και πολλά άλλα.
  
        Η φιλοσοφία μας είναι απλή: καθαρή τροφή, καθαρές σχέσεις. Δεν χρησιμοποιούμε χημικά φυτοφάρμακα ή συντηρητικά, φροντίζουμε για την υγεία του εδάφους, και μαζεύουμε τους καρπούς μας τη σωστή στιγμή, όταν είναι πραγματικά έτοιμοι να σας θρέψουν.
 
       </p>
-      <p className="mb-8 text-xl text-neutral-500 md:text-2xl">
+      <p className="mb-8 text-xl text-neutral-300 md:text-2xl">
       Τα προϊόντα μας τα διαθέτουμε κατευθείαν στον καταναλωτή, χωρίς μεσάζοντες, μέσω τοπικών αγορών εντός της Κορινθίας καθώς και εκτός.
       </p>
-      <p className="mb-8 text-xl text-neutral-500 md:text-2xl">
+      <p className="mb-8 text-xl text-neutral-300 md:text-2xl">
       Πιστεύουμε πως η διατροφή είναι πράξη αγάπης. Κι αυτό προσπαθούμε να δείξουμε σε κάθε καλάθι που φεύγει από το χωράφι μας.
       </p>
       <button onClick={()=>{navigate('/Farms')}} className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
@@ -167,10 +163,10 @@ const ShuffleHero = () => {
         <span className="block mb-4 text-xs md:text-sm text-yellow-600 font-medium">
          Από τη γη μας, για ανθρώπους σαν κι εμάς.
         </span>
-        <h3 className="text-4xl md:text-6xl font-semibold text-slate-300">
+        <h2 className="text-4xl md:text-6xl font-semibold text-slate-200">
          Με μεράκι, πίστη στην παράδοση και αληθινή αγάπη για το καλό φαγητό.
-        </h3>
-        <p className="text-base md:text-lg text-slate-500 my-4 md:my-6">
+        </h2>
+        <p className="text-base md:text-lg text-slate-300 my-4 md:my-6">
          Στο «Κάτω Από Το Αυλάκι» δεν φροντίζουμε απλώς καλλιέργειες, φροντίζουμε ιδέες, αξίες και σχέσεις. Ξεκινήσαμε σαν μια μικρή οικογενειακή προσπάθεια, με σεβασμό στη γη και στους ανθρώπους που την τιμούν με τον ιδρώτα τους.
 
          Κάθε μας προϊόν είναι καρπός αγνής φροντίδας, φυσικής καλλιέργειας και αυθεντικής ελληνικής γεύσης. Δεν κυνηγάμε την ποσότητα· κυνηγάμε την ποιότητα.

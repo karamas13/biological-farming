@@ -1,14 +1,14 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { SiInstagram, SiFacebook } from "react-icons/si";
+import { SiInstagram } from "react-icons/si";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-import HomeButton from "./HomeButton";
 import logonew2 from "/photos/logonew2.avif"
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt  } from "react-icons/fa";
 import { FiMail, FiSend, FiLoader, FiUser, FiMessageSquare, FiCheckCircle } from 'react-icons/fi';
 import emailjs from '@emailjs/browser';
+import fill4 from "/photos/fill4.avif";
 
  const ContactUs = () => {
   return (
@@ -26,7 +26,6 @@ import emailjs from '@emailjs/browser';
         <SocialsBlock className=""/>
         <AboutBlock />
         <SendEmail />
-        <HomeButton /> 
       </motion.div>
        
       <Footer />
@@ -67,13 +66,13 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
     <img
-      src={logonew2}
+      src={logonew2}      
       alt="avatar"
       className="size-[10em] object-cover w-auto my-5 mx-auto"
     />
     <h1 className="mb-12 text-3xl font-medium leading-tight font-mono">
       Βιολογικές Καλλιέργειες.{" "}
-      <span className="text-zinc-400">
+      <span className="text-zinc-300">
         Βρείτε μας στα μέσα δικτύωσης!
       </span>
     </h1>
@@ -93,8 +92,20 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="relative bg-backdrop bg-cover lg:col-span-6 md:col-span-6 row-span-2 w-full h-full col-span-12 overflow-hidden before:absolute before:inset-0 before:bg-black/70 before:content-['']"
-    >
+       className="relative lg:col-span-6 md:col-span-6 row-span-2 w-full h-full col-span-12 overflow-hidden"    >
+      
+      <img
+      src={fill4}
+      alt="Farming backdrop"
+      // Lighthouse optimization properties:
+      loading="eager" // Do not lazy load the LCP image
+      fetchPriority="high" // Tell the browser this is the top priority
+      className="absolute inset-0 h-full w-full object-cover z-0"
+    />
+    
+    {/* Dark Overlay (Moved to a separate div for z-index control) */}
+    <div className="absolute inset-0 bg-black/70 z-0 content-['']" />
+      
       <a
         href="https://www.instagram.com/downofthegapbio/"
         /* Added 'relative z-10' to pull the content above the overlay */
@@ -175,7 +186,7 @@ const SendEmail = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Name Input */}
             <div className="relative">
-              <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+              <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-300" />
               <input
                 type="text"
                 name="from_name"
@@ -187,7 +198,7 @@ const SendEmail = () => {
 
             {/* Email Input */}
             <div className="relative">
-              <FiMail className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+              <FiMail className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-300" />
               <input
                 type="email"
                 name="user_email"
@@ -200,7 +211,7 @@ const SendEmail = () => {
 
           {/* Message Textarea */}
           <div className="relative">
-            <FiMessageSquare className="absolute left-3 top-4 text-zinc-500" />
+            <FiMessageSquare className="absolute left-3 top-4 text-zinc-300" />
             <textarea
               name="message"
               required
@@ -211,7 +222,7 @@ const SendEmail = () => {
               className="w-full bg-zinc-900/50 border border-zinc-700 text-white p-3 pl-10 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all resize-none"
             />
             {/* Character Counter */}
-            <div className={`absolute bottom-3 right-3 text-xs ${charCount >= MAX_CHARS ? 'text-red-500' : 'text-zinc-500'}`}>
+            <div className={`absolute bottom-3 right-3 text-xs ${charCount >= MAX_CHARS ? 'text-red-500' : 'text-zinc-300'}`}>
               {charCount}/{MAX_CHARS}
             </div>
           </div>
