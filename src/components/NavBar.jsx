@@ -46,9 +46,11 @@ const NavBar = () => {
           
           <a href="/" className="flex items-center">
             <img 
-              src={logonew2} 
+              src={logonew2}
+              height="200"
+              width="250" 
               alt="Κάτω απ' το αυλάκι Logo" 
-              className="h-10 md:h-16 lg:h-20 w-auto object-contain" 
+              className="h-10 md:h-16 lg:h-18 w-auto object-contain" 
             />
           </a>
 

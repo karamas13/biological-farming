@@ -2,73 +2,56 @@ import ContactUs from "../components/Contact";
 import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
+  const domain = "https://downthegap.gr"; 
+
   return (
     <div>
       <Helmet>
-        {/* Basic Meta Tags */}
-        <title>Επικοινωνία | Κάτω Απ' το Αυλάκι</title>
+        {/* 1. THE BIG TWO: Title and Description. 
+            Google uses these to build your search result 'snippet'.
+        */}
+        <title>Επικοινωνία | Κάτω Απ' το Αυλάκι - Βιολογικά Προϊόντα Κόρινθος</title>
         <meta
           name="description"
-          content="Επικοινωνήστε μαζί μας για ερωτήσεις ή πληροφορίες σχετικά με τις βιολογικές μας καλλιέργειες στην Πελοπόννησο."
+          content="Επικοινωνήστε με το αγρόκτημα 'Κάτω Απ' το Αυλάκι'. Βρείτε μας στην Κόρινθο για φρέσκα βιολογικά προϊόντα και τοπικές καλλιέργειες στην Πελοπόννησο."
         />
-        <meta
-          name="keywords"
-          content="επικοινωνία, κάτω απ' το αυλάκι, ελληνική καλλιέργεια, βιολογικές καλλιέργειες, Πελοπόννησος, τοπική γεωργία, αγρόκτημα, βιολογικά προϊόντα, κορινθία, Κόρινθος"
-        />
-        <link rel="canonical" href="https://yourdomain.gr/Contact" />
 
-        {/* Open Graph Tags */}
+        {/* 2. CANONICAL: Prevents duplicate content issues */}
+        <link rel="canonical" href={`${domain}/Contact`} />
+
+        {/* 3. OPEN GRAPH: How the link looks when shared on Viber, Facebook, or WhatsApp */}
         <meta property="og:title" content="Επικοινωνία | Κάτω Απ' το Αυλάκι" />
         <meta
           property="og:description"
-          content="Επικοινωνήστε μαζί μας για οποιαδήποτε απορία γύρω από τις βιολογικές καλλιέργειές μας."
+          content="Ελάτε σε επαφή μαζί μας για τα βιολογικά προϊόντα και την παραγωγή μας στην Κόρινθο."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.gr/Contact" />
-        <meta
-          property="og:image"
-          content="https://yourdomain.gr/assets/og-contact.jpg"
-        />
+        <meta property="og:url" content={`${domain}/Contact`} />
+        <meta property="og:image" content={`${domain}/assets/og-image.avif`} />
         <meta property="og:locale" content="el_GR" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Επικοινωνία | Κάτω Απ' το Αυλάκι" />
-        <meta
-          name="twitter:description"
-          content="Ελάτε σε επαφή μαζί μας για περισσότερες πληροφορίες."
-        />
-        <meta
-          name="twitter:image"
-          content="https://yourdomain.gr/assets/og-contact.jpg"
-        />
-        
-        {/* Language and charset */}
+        {/* 4. TECHNICALS */}
         <meta charSet="utf-8" />
         <html lang="el" />
 
-        {/* Structured Data with JSON-LD */}
+        {/* 5. STRUCTURED DATA: The actual 'Backdoor' to Google's ranking logic */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "name": "Επικοινωνία - Κάτω Απ' το Αυλάκι",
-            "description":
-              "Επικοινωνήστε μαζί μας για οποιαδήποτε απορία.",
-            "url": "https://yourdomain.gr/Contact",
-            "publisher": {
+            "mainEntity": {
               "@type": "Organization",
               "name": "Κάτω Απ' το Αυλάκι",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://yourdomain.gr/assets/logo.png"
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Κόρινθος",
+                "addressRegion": "Πελοπόννησος",
+                "addressCountry": "GR"
               }
-            },
-            "inLanguage": "el"
+            }
           })}
         </script>
       </Helmet>
-
       <ContactUs />
     </div>
   );

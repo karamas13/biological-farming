@@ -38,8 +38,8 @@ const Hero = () => {
               src={logonew2} 
               // Set explicit dimensions based on your usual display size
               width="300" 
-              height="300"
-              className="h-[8em] md:h-[14em] lg:h-[18em] w-auto object-contain mb-[2rem]" 
+              height="250"
+              className="h-[8em] md:h-[12em] lg:h-[14em] w-auto object-cover mb-[2rem]" 
               alt="Κάτω απ' το αυλάκι Logo" 
             />
           </motion.div>

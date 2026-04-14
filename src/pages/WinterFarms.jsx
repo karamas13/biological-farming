@@ -1,60 +1,50 @@
-import { SmoothScrollLenis } from "../components/SmoothScrollLenis";
 import { Helmet } from "react-helmet-async";
+import { SmoothScrollLenis } from "../components/SmoothScrollLenis";
 
 const WinterFarms = () => {
   return (
-    <div className="font-serif scrollbar-thin scrollbar-track-green-950 scrollbar-thumb-lime-700 h-32 min-h-screen">
+    <div className="font-serif">
       <Helmet>
-        {/* Page Title */}
         <title>Χειμερινές Βιολογικές Καλλιέργειες | Κάτω Απ’ το Αυλάκι</title>
+        <meta name="description" content="Ανακαλύψτε τις χειμερινές βιολογικές καλλιέργειες μας. Από μπρόκολο και λάχανο μέχρι φρέσκα λεμόνια, καλλιεργούμε με σεβασμό στην αειφορία και την εποχικότητα." />
+        <link rel="canonical" href="https://downthegap.gr/WinterFarms" />
 
-        {/* Meta Description */}
-        <meta
-          name="description"
-          content="Γνωρίστε τις χειμερινές βιολογικές καλλιέργειες του δικτύου μας. Καλλιέργειες που σέβονται τη γη και την εποχικότητα με βάση την αειφορία."
-        />
-
-        {/* Meta Keywords */}
-        <meta
-          name="keywords"
-          content="χειμερινές καλλιέργειες, βιολογική γεωργία, βιώσιμες καλλιέργειες, ελληνικά προϊόντα, χειμερινά λαχανικά"
-        />
-
-        {/* Open Graph Tags */}
+        {/* Social Media (Open Graph) */}
         <meta property="og:title" content="Χειμερινές Βιολογικές Καλλιέργειες | Κάτω Απ’ το Αυλάκι" />
-        <meta
-          property="og:description"
-          content="Μάθετε περισσότερα για τις χειμερινές καλλιέργειες μας και τις μεθόδους καλλιέργειας που σέβονται το περιβάλλον."
-        />
-        <meta property="og:image" content="https://example.com/photos/winter-farm-cover.jpg" />
-        <meta property="og:url" content="https://example.com/WinterFarms" />
+        <meta property="og:description" content="Ανακαλύψτε τα φρέσκα χειμερινά λαχανικά μας, καλλιεργημένα με βιολογικές πρακτικές." />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://downthegap.gr/photos/laxano1.avif" />
 
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://example.com/WinterFarms" />
-
-        {/* JSON-LD Structured Data */}
+        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Χειμερινές Βιολογικές καλλιέργειες",
-            "description":
-              "Σελίδα για τις χειμερινές βιολογικές καλλιέργειες του οργανισμού ‘Κάτω Απ’ το Αυλάκι’. Αειφόρες γεωργικές πρακτικές και εποχική παραγωγή.",
-            "url": "https://example.com/WinterFarms",
+            "name": "Χειμερινές Βιολογικές Καλλιέργειες",
+            "description": "Φρέσκα χειμερινά λαχανικά και καρποί από το δίκτυο ‘Κάτω Απ’ το Αυλάκι’.",
+            "url": "https://downthegap.gr/WinterFarms",
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Γογγυλοκράμβη" },
+                { "@type": "ListItem", "position": 2, "name": "Ελιά" },
+                { "@type": "ListItem", "position": 3, "name": "Μπρόκολο" },
+                { "@type": "ListItem", "position": 4, "name": "Λεμόνι" },
+                { "@type": "ListItem", "position": 5, "name": "Λαχανάκια Βρυξελλών" },
+                { "@type": "ListItem", "position": 6, "name": "Κρεμμυδάκι Φρέσκο" },
+                { "@type": "ListItem", "position": 7, "name": "Λάχανο" },
+                { "@type": "ListItem", "position": 8, "name": "Κουνουπίδι" },
+                { "@type": "ListItem", "position": 9, "name": "Μαρούλι" }
+              ]
+            },
             "publisher": {
               "@type": "Organization",
               "name": "Κάτω Απ’ το Αυλάκι",
-              "url": "https://example.com",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://example.com/photos/logonew2.avif"
-              }
+              "logo": "https://downthegap.gr/photos/logonew2.avif"
             }
           })}
         </script>
       </Helmet>
-
       <SmoothScrollLenis />
     </div>
   );

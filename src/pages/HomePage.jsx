@@ -2,8 +2,6 @@ import { Helmet } from "react-helmet-async";
 import MinInfo from "../components/MinInfo";
 import Hero from "../components/Hero";
 import FarmsSection from "../components/FarmsSection";
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
 
 const HomePage = () => {
   // We define the Schema as a constant to keep the JSX clean
@@ -21,7 +19,7 @@ const HomePage = () => {
         "@type": "LocalBusiness",
         "@id": "https://downthegap.gr/#organization",
         "name": "Κάτω Απ’ το Αυλάκι",
-        "image": "https://downthegap.gr/assets/logo.png",
+        "image": "https://downthegap.gr/assets/logo.avif",
         "url": "https://downthegap.gr/",
         "address": {
           "@type": "20100",
@@ -47,7 +45,7 @@ const HomePage = () => {
         <meta property="og:description" content="Ανακαλύψτε τη φιλοσοφία πίσω από την παραγωγή βιολογικών προϊόντων υψηλής ποιότητας στην Ελλάδα." />
         <meta property="og:url" content="https://downthegap.gr/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://downthegap.gr/images/og-image.jpg" />
+        <meta property="og:image" content="https://downthegap.gr/images/og-image.avif" />
         <meta property="og:locale" content="el_GR" />
 
         {/* Structured Data */}
@@ -58,13 +56,10 @@ const HomePage = () => {
 
       {/* Main tag is essential for Accessibility scores */}
       <main id="main-content" className="overflow-x-hidden">
-        <NavBar />
         <Hero/>
         <MinInfo/>
         <FarmsSection />
       </main>
-
-      <Footer color="#020617" />
     </div>
   );
 };

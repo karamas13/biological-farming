@@ -56,8 +56,6 @@ const Farms = () => {
           })}
         </script>
       </Helmet>
-
-      <NavBar />
       <FarmsSection />
       <Footer color={"#020617"} />
     </div>

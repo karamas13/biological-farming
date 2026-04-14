@@ -2,8 +2,6 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { SiInstagram } from "react-icons/si";
-import Footer from "./Footer";
-import NavBar from "./NavBar";
 import logonew2 from "/photos/logonew2.avif"
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt  } from "react-icons/fa";
 import { FiMail, FiSend, FiLoader, FiUser, FiMessageSquare, FiCheckCircle } from 'react-icons/fi';
@@ -13,7 +11,6 @@ import fill4 from "/photos/fill4.avif";
  const ContactUs = () => {
   return (
     <div className="min-h-screen bg-zinc-950 px-4 py-2 text-zinc-50 font-sans">
-      <NavBar />
       <motion.div
         initial="initial"
         animate="animate"
@@ -27,8 +24,6 @@ import fill4 from "/photos/fill4.avif";
         <AboutBlock />
         <SendEmail />
       </motion.div>
-       
-      <Footer />
     </div>
   );
 };
@@ -64,11 +59,13 @@ const Block = ({ className, ...rest }) => {
 };
 
 const HeaderBlock = () => (
-  <Block className="col-span-12 row-span-2 md:col-span-6">
+  <Block className="col-span-12 row-span-2 md:col-span-6 ">
     <img
-      src={logonew2}      
+      src={logonew2}
+      height="160"
+      width="317"      
       alt="avatar"
-      className="size-[10em] object-cover w-auto my-5 mx-auto"
+      className="h-[160px] w-[317px] object-cover  my-5 mx-auto"
     />
     <h1 className="mb-12 text-3xl font-medium leading-tight font-mono">
       Βιολογικές Καλλιέργειες.{" "}
@@ -95,12 +92,13 @@ const SocialsBlock = () => (
        className="relative lg:col-span-6 md:col-span-6 row-span-2 w-full h-full col-span-12 overflow-hidden"    >
       
       <img
-      src={fill4}
+      src="/photos/fill4.avif"
       alt="Farming backdrop"
-      // Lighthouse optimization properties:
-      loading="eager" // Do not lazy load the LCP image
-      fetchPriority="high" // Tell the browser this is the top priority
-      className="absolute inset-0 h-full w-full object-cover z-0"
+      height="378"
+      width="436"
+      loading="eager" 
+      fetchPriority="high"
+      className="absolute h-[436px] w-[436px] my-auto mx-auto inset-0 object-cover z-0"
     />
     
     {/* Dark Overlay (Moved to a separate div for z-index control) */}
@@ -136,7 +134,7 @@ const AboutBlock = () => (
               </h2>
               <div className="text-lg sm:text-xl flex flex-col items-center sm:items-center  ">
                 <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row"><FaPhoneAlt className="text-yellow-500"/> +30 6943200685</section>
-                <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row" ><FaEnvelope className="text-yellow-500"/> downthegap@gmail.com</section>
+                <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row" ><FaEnvelope className="text-yellow-500"/> downthegapk@gmail.com</section>
                 <section className="flex items-center gap-6 py-2 lg:flex lg:flex-row"><FaMapMarkerAlt className="text-yellow-500"/> Based in Korinth, Greece</section>
               </div>
             </div>
@@ -157,9 +155,9 @@ const SendEmail = () => {
 
     // --- CONFIGURATION ---
     // Update these with your actual EmailJS keys
-    const SERVICE_ID = "";
-    const TEMPLATE_ID = "";
-    const PUBLIC_KEY = "";
+    const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(() => {

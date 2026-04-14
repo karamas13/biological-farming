@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const ImageWithLoader = ({ src, onClick }) => {
+const ImageWithLoader = ({ src, alt, onClick }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
@@ -27,6 +27,7 @@ const ImageWithLoader = ({ src, onClick }) => {
       {/* 2. The Actual Image */}
       <motion.img
         src={src}
+        alt={alt}
         onLoad={() =>  setTimeout(() => setIsLoaded(true))}
         onClick={onClick}
         initial={{ opacity: 0 }}

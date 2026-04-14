@@ -1,7 +1,7 @@
 import { FaInstagram, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLeaf } from "react-icons/fa";
 import logonew2 from "/photos/logonew2.avif";
 
-const Footer = ({ color = "#0a0a0a" }) => {
+const Footer = ({ color }) => {
   return (
     <footer 
       className="text-[#f1f1f1] transition-colors duration-500" 
@@ -93,7 +93,7 @@ const Footer = ({ color = "#0a0a0a" }) => {
       {/* Footer Bottom */}
       <div className="border-t border-white/10 py-6 text-center text-sm text-stone-400 px-4">
         <p>
-          © 2026 downthegap.com | Designed by{" "}
+          © 2026 downthegap.gr | Designed & Developed by{" "}
           <a 
             href="https://nickkaramaroudisdev.com/" 
             target="_blank" 

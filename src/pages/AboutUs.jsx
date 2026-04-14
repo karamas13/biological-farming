@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import AboutUsHero from "../components/AboutUsHero";
-import NavBar from "../components/NavBar";
+
 
 const AboutUs = () => {
   return (
@@ -33,8 +33,6 @@ const AboutUs = () => {
           `}
         </script>
       </Helmet>
-
-      <NavBar className="z-[100] fixed w-full" />
       <AboutUsHero />
     </main>
   );

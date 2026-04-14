@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform, useMotionTemplate, useMotionValue, use
 import { FiArrowUpRight } from "react-icons/fi";
 import ReactLenis from "lenis/react";
 import farming3 from "/photos/farming3.avif"
-import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import fill1 from "/photos/fill1.avif"
 import fill2 from "/photos/fill2.avif"
@@ -57,8 +56,6 @@ return (
         >
           <FAQAccordion />
         </AboutUsSection>
-
-        <Footer />
       </main>
     </ReactLenis>
   );

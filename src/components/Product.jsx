@@ -43,7 +43,10 @@ const Product = ({ src, additionalImages, description, title }) => {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
               src={selectedFullscreenImg}
-              alt="Fullscreen Product"
+              loading="lazy"
+              decoding="async"
+              // ADDED: Descriptive alt for fullscreen
+              alt={`${title} - Προβολή σε πλήρη οθόνη`}
               className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl"
             />
           </motion.div>
@@ -75,6 +78,10 @@ const Product = ({ src, additionalImages, description, title }) => {
             transition={{ duration: 0.8 }}
             whileHover={{ scale: 1.05, rotate: 5 }}
             src={src}
+            loading="lazy"
+            decoding="async"
+            // ADDED: Uses the product title as alt
+            alt={title}
             className="object-cover h-[15em] sm:h-[20em] md:h-[22em] cursor-pointer"
             onClick={() => setShowImages(!showImages)}
           />
@@ -100,21 +107,23 @@ const Product = ({ src, additionalImages, description, title }) => {
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {additionalImages.map((image, index) => (
-  <div key={index} className="relative group overflow-hidden rounded-xl bg-zinc-800/50 min-h-[200px]">
-    <ImageWithLoader 
-      src={image} 
-      onClick={() => setSelectedFullscreenImg(image)} 
-    />
-    
-    {/* Fullscreen Icon Overlay */}
-    <div 
-      onClick={() => setSelectedFullscreenImg(image)}
-      className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-zoom-in z-10"
-    >
-      <FiZoomIn className="text-white text-3xl" />
-    </div>
-  </div>
-))}
+                <div key={index} className="relative group overflow-hidden rounded-xl bg-zinc-800/50 min-h-[200px]">
+                  <ImageWithLoader 
+                    src={image} 
+                    // ADDED: Passed descriptive alt to the loader component
+                    alt={`${title} - Συμπληρωματική εικόνα ${index + 1}`}     
+                    onClick={() => setSelectedFullscreenImg(image)} 
+                  />
+                  
+                  {/* Fullscreen Icon Overlay */}
+                  <div 
+                    onClick={() => setSelectedFullscreenImg(image)}
+                    className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-zoom-in z-10"
+                  >
+                    <FiZoomIn className="text-white text-3xl" />
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
         )}

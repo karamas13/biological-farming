@@ -1,48 +1,42 @@
-// main.jsx or wherever you define your routes
-import { StrictMode } from 'react';
+import { StrictMode, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ReactLenis } from 'lenis/react'; // 1. Import Lenis here
 
 import './index.css';
-
-import HomePage from './pages/HomePage';
-import WinterFarms from './pages/WinterFarms';
-import SummerFarms from './pages/SummerFarms';
-import AboutUs from './pages/AboutUs';
-import Farms from './pages/Farms';
-import Contact from './pages/Contact';
-
 import ScrollWrapper from './components/ScrollWrapper';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
-import { HelmetProvider } from 'react-helmet-async';
+const HomePage = lazy(() => import('./pages/HomePage'));
+const WinterFarms = lazy(() => import('./pages/WinterFarms'));
+const SummerFarms = lazy(() => import('./pages/SummerFarms'));
+const AboutUs = lazy(() => import('./pages/AboutUs'));
+const Farms = lazy(() => import('./pages/Farms'));
+const Contact = lazy(() => import('./pages/Contact'));
 
-const withScroll = (element) => <HelmetProvider><ScrollWrapper>{element}</ScrollWrapper></HelmetProvider>;
+const withLayout = (Component, footerColor, navProps = {}) => (
+  <HelmetProvider>
+    <ReactLenis root options={{ lerp: 0.05 }}>
+      <Suspense fallback={<div className="min-h-screen bg-zinc-950" />}>
+        <NavBar /> 
+        <ScrollWrapper>        
+          <Component />
+        </ScrollWrapper>
+        <Footer color={footerColor} /> 
+      </Suspense>
+    </ReactLenis>
+  </HelmetProvider>
+);
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: withScroll(<HomePage />),
-  },
-  {
-    path: '/WinterFarms',
-    element: withScroll(<WinterFarms />),
-  },
-  {
-    path: '/SummerFarms',
-    element: withScroll(<SummerFarms />),
-  },
-  {
-    path: '/AboutUs',
-    element: withScroll(<AboutUs />),
-  },
-  {
-    path: '/Farms',
-    element: withScroll(<Farms />),
-  },
-  {
-    path: '/Contact',
-    element: withScroll(<Contact />),
-  },
+  { path: '/', element: withLayout(HomePage, "#020617") },
+  { path: '/WinterFarms', element: withLayout(WinterFarms, "#09090b") },
+  { path: '/SummerFarms', element: withLayout(SummerFarms, "#09090b") },
+  { path: '/AboutUs', element: withLayout(AboutUs, "#09090b") },
+  { path: '/Farms', element: withLayout(Farms, "#020617") },
+  { path: '/Contact', element: withLayout(Contact, "#09090b") },
 ]);
 
 createRoot(document.getElementById('root')).render(
