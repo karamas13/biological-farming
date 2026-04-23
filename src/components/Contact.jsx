@@ -187,7 +187,7 @@ const SendEmail = () => {
               <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-300" />
               <input
                 type="text"
-                name="from_name"
+                name="user_name"
                 required
                 placeholder="Ονοματεπώνυμο"
                 className="w-full bg-zinc-900/50 border border-zinc-700 text-white p-3 pl-10 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all"

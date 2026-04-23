@@ -3,6 +3,7 @@ import farm from "/photos/farm.avif";
 import { IoMdSnow, IoMdSunny } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import AvailabilityList from "./AvailabilityList";
 
 const FarmsSection = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ const FarmsSection = () => {
         {/* Overlay Gradient - z-1 to sit above the base image */}
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-transparent to-slate-950 opacity-100 z-1" />
 
+
         {/* Header Section */}
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,6 +41,8 @@ const FarmsSection = () => {
             Εξερευνήστε τις Χειμερινές και Θερινές μας Καλλιέργειες
           </p>
         </motion.div>
+
+        <AvailabilityList />
 
         {/* Cards Container */}
         <div className="relative z-20 max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-stretch gap-8 md:gap-12 lg:gap-16 px-6">
@@ -85,7 +89,7 @@ const FarmsSection = () => {
                 >
                   <div className="absolute inset-0 w-0 bg-orange-600 transition-all duration-350 ease-out group-hover:w-full" />
                   <span className="relative text-black group-hover:text-white transition-colors">
-                    Περισσότερα...
+                    Περισσότερα
                   </span>
                 </button>
               </div>

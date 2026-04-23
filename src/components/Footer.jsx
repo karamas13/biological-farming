@@ -30,7 +30,7 @@ const Footer = ({ color }) => {
               <FaInstagram className="text-2xl" />
             </a>        
             <a 
-              href="mailto:downthegap@gmail.com" 
+              href="mailto:downthegapk@gmail.com" 
               aria-label="Send us an email"
               className="p-3 bg-white/5 hover:bg-red-700 rounded-xl transition-all duration-300"
             >
@@ -81,7 +81,7 @@ const Footer = ({ color }) => {
               <FaPhoneAlt className="text-yellow-600"/> +30 6943200685
             </a>
             <p className="flex items-center gap-4">
-              <FaEnvelope className="text-yellow-600"/> downthegap@gmail.com
+              <FaEnvelope className="text-yellow-600"/> downthegapk@gmail.com
             </p>
             <p className="flex items-center gap-4 text-center lg:text-left">
               <FaMapMarkerAlt className="text-yellow-600"/> Korinth, Greece

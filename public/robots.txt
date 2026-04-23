@@ -7,6 +7,8 @@ Disallow: /dist/
 Disallow: /build/
 Disallow: /.env
 Disallow: /config/
+Disallow: /admin/
+Disallow: /login/
 
 Allow: /assets/
 Allow: /photos/
